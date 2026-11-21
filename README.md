@@ -14,6 +14,7 @@ Nhóm 2 · K26D2 · UFM
 
 Trên điện thoại: vuốt trái/phải.
 
+- Bản PDF 20 trang: [`files/Masan-PhucLong.pdf`](files/Masan-PhucLong.pdf)
 - Bản PowerPoint chỉnh sửa được: [`files/Masan-PhucLong.pptx`](files/Masan-PhucLong.pptx) (cần cài font Lora và Inter).
 - Mã nguồn dựng cả hai bản từ một spec chung: [`src/`](src/) — nội dung từng slide nằm ở `src/spec/build-spec.js`.
 
