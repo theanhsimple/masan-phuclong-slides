@@ -19,6 +19,9 @@ spec = json.load(open(os.path.join(ROOT, 'spec', 'presentation.json'), encoding=
 
 EFFECTS = {
     'fade': (10, 0, 'fade', 500),
+    'float': (42, 0, 'fade', 700),       # Float In: fade + rise
+    'floatWords': (42, 0, 'fade', 650),  # Float In, by word (title mask reveal)
+    'zoom': (23, 16, 'fade', 600),       # Zoom in from 85% + fade
     'wipeUp': (22, 4, 'wipe(up)', 650),
     'wipeRight': (22, 8, 'wipe(right)', 650),
     'wipeDown': (22, 1, 'wipe(down)', 650),
@@ -27,7 +30,10 @@ EFFECTS = {
 
 def effect_for(el):
     a = el.get('m', {}).get('a')
-    if a in ('fade', 'rise', 'words', 'count', 'scale'): return 'fade'
+    if a == 'fade': return 'fade'
+    if a in ('rise', 'count'): return 'float'
+    if a == 'words': return 'floatWords'
+    if a == 'scale': return 'zoom'
     if a == 'mask': return 'wipeRight'
     if a == 'grow': return 'wipeUp'
     if a == 'growX': return 'wipeRight'
@@ -57,15 +63,26 @@ def build_timing(groups, kinds):
         inner = []
         for k, (spid, eff, delay) in enumerate(effs):
             pid, sub, flt, dur = EFFECTS[eff]
+            extra, iterate = '', ''
+            def anim(attr, frm, to, d=dur):
+                return (f'<p:anim calcmode="lin" valueType="num"><p:cBhvr><p:cTn id="{nid()}" dur="{d}" fill="hold"/><p:tgtEl><p:spTgt spid="{spid}"/></p:tgtEl>'
+                        f'<p:attrNameLst><p:attrName>{attr}</p:attrName></p:attrNameLst></p:cBhvr><p:tavLst>'
+                        f'<p:tav tm="0"><p:val><p:strVal val="{frm}"/></p:val></p:tav><p:tav tm="100000"><p:val><p:strVal val="{to}"/></p:val></p:tav></p:tavLst></p:anim>')
+            if eff in ('float', 'floatWords'):
+                extra = anim('ppt_x', '#ppt_x', '#ppt_x') + anim('ppt_y', '#ppt_y+.04', '#ppt_y')
+            if eff == 'floatWords':
+                iterate = '<p:iterate type="wd"><p:tmPct val="9000"/></p:iterate>'
+            if eff == 'zoom':
+                extra = anim('ppt_w', '#ppt_w*0.85', '#ppt_w') + anim('ppt_h', '#ppt_h*0.85', '#ppt_h')
             node = ('afterEffect' if auto else 'clickEffect') if k == 0 else 'withEffect'
             c1, c2, c3 = nid(), nid(), nid()
             inner.append(
                 f'<p:par><p:cTn id="{c1}" presetID="{pid}" presetClass="entr" presetSubtype="{sub}" fill="hold" grpId="0" nodeType="{node}">'
-                f'<p:stCondLst><p:cond delay="{delay}"/></p:stCondLst><p:childTnLst>'
+                f'<p:stCondLst><p:cond delay="{delay}"/></p:stCondLst>{iterate}<p:childTnLst>'
                 f'<p:set><p:cBhvr><p:cTn id="{c2}" dur="1" fill="hold"><p:stCondLst><p:cond delay="0"/></p:stCondLst></p:cTn>'
                 f'<p:tgtEl><p:spTgt spid="{spid}"/></p:tgtEl><p:attrNameLst><p:attrName>style.visibility</p:attrName></p:attrNameLst></p:cBhvr>'
                 f'<p:to><p:strVal val="visible"/></p:to></p:set>'
-                f'<p:animEffect transition="in" filter="{flt}"><p:cBhvr><p:cTn id="{c3}" dur="{dur}"/><p:tgtEl><p:spTgt spid="{spid}"/></p:tgtEl></p:cBhvr></p:animEffect>'
+                f'<p:animEffect transition="in" filter="{flt}"><p:cBhvr><p:cTn id="{c3}" dur="{dur}"/><p:tgtEl><p:spTgt spid="{spid}"/></p:tgtEl></p:cBhvr></p:animEffect>' + extra +
                 f'</p:childTnLst></p:cTn></p:par>')
         out.append(f'<p:par><p:cTn id="{g}" fill="hold"><p:stCondLst>{cond}</p:stCondLst><p:childTnLst>'
                    f'<p:par><p:cTn id="{g2}" fill="hold"><p:stCondLst><p:cond delay="0"/></p:stCondLst><p:childTnLst>'
@@ -128,11 +145,12 @@ for item in zin.infolist():
                 if spid: groups.setdefault(step, []).append((spid, e2, d))
         ordered = [sorted(groups.get(k, []), key=lambda t: t[2]) for k in range(0, max(groups.keys(), default=-1) + 1)]
         timing = build_timing(ordered, kinds)
-        trans = MORPH if morph else FADE
+        # Morph on every slide (shared titles/rules glide like the HTML); Fade where PowerPoint lacks Morph
+        trans = MORPH
         xml = re.sub(r'<p:transition.*?</p:transition>|<p:timing>.*?</p:timing>', '', xml, flags=re.S)
         xml = xml.replace('</p:clrMapOvr>', '</p:clrMapOvr>' + trans + timing, 1)
         data = xml.encode('utf-8')
-        report.append(f"slide {idx + 1:02d} {s['id']:<11} transition={'morph' if morph else 'fade'} effects={sum(len(g) for g in ordered)} clickGroups={max(0, len(ordered) - 1)}")
+        report.append(f"slide {idx + 1:02d} {s['id']:<11} transition=morph effects={sum(len(g) for g in ordered)} clickGroups={max(0, len(ordered) - 1)}")
     zout.writestr(item, data)
 zout.close(); zin.close()
 shutil.move(tmp, PPTX)

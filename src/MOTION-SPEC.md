@@ -13,13 +13,13 @@ Mọi chuyển động được khai báo **một lần** trong `spec/presentati
 ## Từ vựng chuyển động
 | Mã | HTML (Web Animations API) | PowerPoint |
 |---|---|---|
-| `words` | Từng từ trồi lên trong mặt nạ | Fade |
-| `rise` / `fade` / `scale` | Trồi 30px + mờ dần / mờ dần / phóng 0.84→1 | Fade |
+| `words` | Từng từ trồi lên trong mặt nạ | Float In **theo từng từ** |
+| `rise` / `fade` / `scale` | Trồi 30px + mờ dần / mờ dần / phóng 0.84→1 | Float In / Fade / Zoom 85%→100% |
 | `mask` | Mặt nạ mở trái→phải + ảnh thu từ 1.18 | Wipe từ trái |
 | `grow` | Cột/khối mọc từ đáy, nhãn số đếm lên | Wipe từ dưới |
 | `draw` | Nét kẻ tự vẽ; vòng 85% quay vẽ | Wipe trái/trên · Wheel |
-| `count` | Đếm số 0 → giá trị (định dạng vi-VN) | Fade |
-| `morph` | FLIP: đối tượng bay & biến hình sang vị trí mới | Morph (slide 4→5) |
+| `count` | Đếm số 0 → giá trị (định dạng vi-VN) | Float In (PowerPoint không đếm số được) |
+| `morph` | FLIP: đối tượng bay & biến hình sang vị trí mới | Morph trên mọi slide (Fade nếu PowerPoint cũ) |
 
 ## Chuyển slide (HTML)
 Slide cũ mờ + nhoè 8px + thu 0.985; slide mới phóng 1.025 → 1. Hai cặp “shared-object”: **WinCommerce → WinMart+ (4→5)** và **3 cột sở hữu → 3 cột định giá (9→10)**.
@@ -32,3 +32,6 @@ Tĩnh (mục lục) → mở dần (bối cảnh, động cơ) → cảnh mạnh
 
 ## Khả năng tiếp cận
 `prefers-reduced-motion`: tắt toàn bộ animation, hiện trạng thái cuối. Không thông tin nào chỉ nằm trong chuyển động.
+
+## PowerPoint không làm được (chỉ có ở HTML)
+Quầng sáng trôi, gợn sóng/hơi nước trong tách trà, parallax theo chuột, đếm số, morph từng cột biểu đồ.
