@@ -1,0 +1,6578 @@
+{
+ "meta": {
+  "title": "Masan × Phúc Long — Phân tích chiến lược thu mua",
+  "author": "Nhóm 2 · K26D2 · UFM",
+  "version": "3.0",
+  "canvas": {
+   "width": 1920,
+   "height": 1080,
+   "pptx": "13.333in × 7.5in (1px = 0.5pt)"
+  },
+  "direction": "Ủ Vị — Tea Light Editorial"
+ },
+ "tokens": {
+  "name": "Ủ Vị — Tea Light Editorial",
+  "canvas": {
+   "width": 1920,
+   "height": 1080,
+   "pptx": "13.333in × 7.5in (1px = 0.5pt)"
+  },
+  "grid": {
+   "marginX": 140,
+   "marginTop": 120,
+   "marginBottom": 100,
+   "columns": 12,
+   "gutter": 32,
+   "contentWidth": 1640
+  },
+  "color": {
+   "forest950": "#07140F",
+   "forest900": "#0B1D16",
+   "forest800": "#12291F",
+   "forest700": "#1B3A2C",
+   "tea600": "#2B6A4E",
+   "tea400": "#5E9C7C",
+   "sage": "#9DCCB1",
+   "amber": "#D9963F",
+   "amberL": "#E3AC5C",
+   "amberD": "#93520F",
+   "copper": "#7A3E0E",
+   "cream": "#F4EEE2",
+   "cream2": "#EAE2CF",
+   "parch": "#DDD1B7",
+   "parchD": "#B9AE95",
+   "ink": "#14271F",
+   "muted": "#4C5A51",
+   "mutedL": "#B5C7BC",
+   "line": "#D3C7AD",
+   "lineD": "#2E4A3D"
+  },
+  "scenes": {
+   "dusk": "linear 155° forest800 → forest900 → forest950 · amber glow top-right (α .28) · tea glow bottom-left (α .35) · grain 7%",
+   "hero": "dusk + stronger amber glow behind the tea-cup illustration",
+   "paper": "linear 160° #F6F1E6 → #EDE5D3 · sage glow top-right (α .35) · amber glow bottom-left (α .18) · grain 6%",
+   "paper2": "linear 160° #EFE7D6 → #E2D7BF · same glows",
+   "amber": "linear 135° #E8B062 → #D38B37 → #A9601E · cream glow top-left (α .35)",
+   "split": "left half dusk / right half warm roast #2B1F12 → #3B2914 · seam at x = 960"
+  },
+  "type": {
+   "display": {
+    "family": "Lora",
+    "weight": 500,
+    "size": 140,
+    "lineHeight": 1,
+    "tracking": -2
+   },
+   "statement": {
+    "family": "Lora",
+    "weight": 500,
+    "size": 104,
+    "lineHeight": 1.06
+   },
+   "title": {
+    "family": "Lora",
+    "weight": 500,
+    "size": 68,
+    "lineHeight": 1.1
+   },
+   "h2": {
+    "family": "Lora",
+    "weight": 500,
+    "size": 44,
+    "lineHeight": 1.18
+   },
+   "h3": {
+    "family": "Inter",
+    "weight": 600,
+    "size": 32,
+    "lineHeight": 1.25
+   },
+   "body": {
+    "family": "Inter",
+    "weight": 400,
+    "size": 28,
+    "lineHeight": 1.45
+   },
+   "label": {
+    "family": "Inter",
+    "weight": 600,
+    "size": 26,
+    "lineHeight": 1.3
+   },
+   "small": {
+    "family": "Inter",
+    "weight": 400,
+    "size": 24,
+    "lineHeight": 1.4
+   },
+   "caption": {
+    "family": "Inter",
+    "weight": 400,
+    "size": 22,
+    "lineHeight": 1.35
+   },
+   "eyebrow": {
+    "family": "Inter",
+    "weight": 600,
+    "size": 22,
+    "tracking": 4,
+    "case": "upper"
+   },
+   "numerals": "Lora 500 at 72 / 120 / 150 / 200 px"
+  },
+  "motion": {
+   "easeOut": "cubic-bezier(.16,1,.3,1)",
+   "easeInOut": "cubic-bezier(.65,0,.35,1)",
+   "micro": 300,
+   "reveal": 640,
+   "object": 820,
+   "transition": 900,
+   "stagger": 110,
+   "words": "per-word mask rise, 45ms stagger",
+   "pptx": "fade 500ms · wipe-up 600ms for bars/panels · wipe-right 600ms for rules · slide fade transition · morph on slide 5"
+  }
+ },
+ "slides": [
+  {
+   "id": "cover",
+   "section": "Mở đầu",
+   "scene": "hero",
+   "dark": true,
+   "layout": "hero",
+   "transition": "fade",
+   "deco": [
+    {
+     "k": "cup",
+     "cx": 1450,
+     "cy": 590,
+     "r": 300
+    },
+    {
+     "k": "steam",
+     "x": 1450,
+     "y": 110
+    },
+    {
+     "k": "contour",
+     "cx": 160,
+     "cy": 1060,
+     "rx": 520,
+     "ry": 300,
+     "n": 9,
+     "c": "#9DCCB1",
+     "a": 0.1,
+     "rot": -8
+    }
+   ],
+   "els": [
+    {
+     "t": "text",
+     "id": "eyebrow",
+     "x": 140,
+     "y": 120,
+     "w": 900,
+     "h": 30,
+     "text": "Phân tích thương vụ M&A",
+     "s": "eyebrow",
+     "c": "#E3AC5C",
+     "m": {
+      "a": "fade",
+      "d": 0
+     }
+    },
+    {
+     "t": "text",
+     "id": "title",
+     "x": 140,
+     "y": 296,
+     "w": 1100,
+     "h": 336,
+     "text": [
+      {
+       "t": "Masan "
+      },
+      {
+       "t": "×",
+       "c": "#E3AC5C"
+      },
+      {
+       "t": "\nPhúc Long"
+      }
+     ],
+     "s": "display",
+     "size": 150,
+     "c": "#F4EEE2",
+     "role": "title",
+     "m": {
+      "a": "words",
+      "d": 150
+     }
+    },
+    {
+     "t": "text",
+     "id": "sub",
+     "x": 140,
+     "y": 640,
+     "w": 980,
+     "h": 64,
+     "text": "Chiến lược thu mua theo từng bước",
+     "s": "h2",
+     "italic": true,
+     "size": 48,
+     "c": "#E3AC5C",
+     "m": {
+      "a": "rise",
+      "d": 650
+     }
+    },
+    {
+     "t": "line",
+     "id": "rule",
+     "x1": 140,
+     "y1": 900,
+     "x2": 1780,
+     "y2": 900,
+     "c": "#2E4A3D",
+     "w": 2,
+     "m": {
+      "a": "draw",
+      "d": 800
+     }
+    },
+    {
+     "t": "text",
+     "id": "meta1",
+     "x": 140,
+     "y": 928,
+     "w": 800,
+     "h": 40,
+     "text": "Nhóm 2 · K26D2 · UFM",
+     "s": "body",
+     "c": "#B5C7BC",
+     "m": {
+      "a": "fade",
+      "d": 950
+     }
+    },
+    {
+     "t": "text",
+     "id": "meta2",
+     "x": 980,
+     "y": 928,
+     "w": 800,
+     "h": 40,
+     "text": "2021 – 2026 · 20% → 51% → 85%",
+     "s": "label",
+     "c": "#E3AC5C",
+     "align": "right",
+     "m": {
+      "a": "fade",
+      "d": 1050
+     }
+    }
+   ],
+   "notes": "Chào thầy cô và các bạn. Nhóm 2 trình bày phân tích chiến lược thu mua Phúc Long của Masan Group. Hình ảnh chủ đạo là vòng tròn của một tách trà nhìn từ trên xuống, và dãy số 20% – 51% – 85% là “xương sống” của câu chuyện: Masan nâng sở hữu Phúc Long qua ba đợt."
+  },
+  {
+   "id": "agenda",
+   "section": "Mở đầu",
+   "scene": "paper",
+   "dark": false,
+   "transition": "fade",
+   "deco": [
+    {
+     "k": "contour",
+     "cx": 1900,
+     "cy": 1080,
+     "rx": 520,
+     "ry": 340,
+     "n": 8,
+     "c": "#5E9C7C",
+     "a": 0.12,
+     "rot": 12
+    }
+   ],
+   "els": [
+    {
+     "t": "text",
+     "id": "eyebrow",
+     "x": 140,
+     "y": 112,
+     "w": 1640,
+     "h": 30,
+     "text": "Mục lục",
+     "s": "eyebrow",
+     "c": "#93520F",
+     "m": {
+      "a": "fade",
+      "d": 0
+     }
+    },
+    {
+     "t": "text",
+     "id": "title",
+     "x": 140,
+     "y": 152,
+     "w": 1640,
+     "h": 170,
+     "text": "Bốn chương của một thương vụ",
+     "s": "title",
+     "c": "#14271F",
+     "role": "title",
+     "m": {
+      "a": "words",
+      "d": 80
+     }
+    },
+    {
+     "t": "line",
+     "id": "r0",
+     "x1": 140,
+     "y1": 330,
+     "x2": 1160,
+     "y2": 330,
+     "c": "#D3C7AD",
+     "w": 2,
+     "m": {
+      "a": "draw",
+      "d": 250
+     }
+    },
+    {
+     "t": "text",
+     "id": "n0",
+     "x": 140,
+     "y": 356,
+     "w": 140,
+     "h": 84,
+     "text": "01",
+     "s": "num",
+     "size": 72,
+     "c": "#93520F",
+     "m": {
+      "a": "rise",
+      "d": 300
+     }
+    },
+    {
+     "t": "text",
+     "id": "t0",
+     "x": 300,
+     "y": 360,
+     "w": 860,
+     "h": 44,
+     "text": "Hai doanh nghiệp, bối cảnh và động cơ",
+     "s": "h3",
+     "c": "#14271F",
+     "m": {
+      "a": "rise",
+      "d": 340
+     }
+    },
+    {
+     "t": "text",
+     "id": "s0",
+     "x": 300,
+     "y": 412,
+     "w": 860,
+     "h": 36,
+     "text": "Masan, Phúc Long và lý do hai bên tìm đến nhau",
+     "s": "small",
+     "c": "#4C5A51",
+     "m": {
+      "a": "rise",
+      "d": 380
+     }
+    },
+    {
+     "t": "line",
+     "id": "r1",
+     "x1": 140,
+     "y1": 480,
+     "x2": 1160,
+     "y2": 480,
+     "c": "#D3C7AD",
+     "w": 2,
+     "m": {
+      "a": "draw",
+      "d": 360
+     }
+    },
+    {
+     "t": "text",
+     "id": "n1",
+     "x": 140,
+     "y": 506,
+     "w": 140,
+     "h": 84,
+     "text": "02",
+     "s": "num",
+     "size": 72,
+     "c": "#93520F",
+     "m": {
+      "a": "rise",
+      "d": 410
+     }
+    },
+    {
+     "t": "text",
+     "id": "t1",
+     "x": 300,
+     "y": 510,
+     "w": 860,
+     "h": 44,
+     "text": "Quá trình thực hiện thương vụ",
+     "s": "h3",
+     "c": "#14271F",
+     "m": {
+      "a": "rise",
+      "d": 450
+     }
+    },
+    {
+     "t": "text",
+     "id": "s1",
+     "x": 300,
+     "y": 562,
+     "w": 860,
+     "h": 36,
+     "text": "Ba bước nâng sở hữu: 20% → 51% → 85%",
+     "s": "small",
+     "c": "#4C5A51",
+     "m": {
+      "a": "rise",
+      "d": 490
+     }
+    },
+    {
+     "t": "line",
+     "id": "r2",
+     "x1": 140,
+     "y1": 630,
+     "x2": 1160,
+     "y2": 630,
+     "c": "#D3C7AD",
+     "w": 2,
+     "m": {
+      "a": "draw",
+      "d": 470
+     }
+    },
+    {
+     "t": "text",
+     "id": "n2",
+     "x": 140,
+     "y": 656,
+     "w": 140,
+     "h": 84,
+     "text": "03",
+     "s": "num",
+     "size": 72,
+     "c": "#93520F",
+     "m": {
+      "a": "rise",
+      "d": 520
+     }
+    },
+    {
+     "t": "text",
+     "id": "t2",
+     "x": 300,
+     "y": 660,
+     "w": 860,
+     "h": 44,
+     "text": "Yếu tố thúc đẩy và cản trở",
+     "s": "h3",
+     "c": "#14271F",
+     "m": {
+      "a": "rise",
+      "d": 560
+     }
+    },
+    {
+     "t": "text",
+     "id": "s2",
+     "x": 300,
+     "y": 712,
+     "w": 860,
+     "h": 36,
+     "text": "Bảy nguồn giá trị kỳ vọng và mặt trái của từng nguồn",
+     "s": "small",
+     "c": "#4C5A51",
+     "m": {
+      "a": "rise",
+      "d": 600
+     }
+    },
+    {
+     "t": "line",
+     "id": "r3",
+     "x1": 140,
+     "y1": 780,
+     "x2": 1160,
+     "y2": 780,
+     "c": "#D3C7AD",
+     "w": 2,
+     "m": {
+      "a": "draw",
+      "d": 580
+     }
+    },
+    {
+     "t": "text",
+     "id": "n3",
+     "x": 140,
+     "y": 806,
+     "w": 140,
+     "h": 84,
+     "text": "04",
+     "s": "num",
+     "size": 72,
+     "c": "#93520F",
+     "m": {
+      "a": "rise",
+      "d": 630
+     }
+    },
+    {
+     "t": "text",
+     "id": "t3",
+     "x": 300,
+     "y": 810,
+     "w": 860,
+     "h": 44,
+     "text": "Đánh giá kết quả và tổng kết",
+     "s": "h3",
+     "c": "#14271F",
+     "m": {
+      "a": "rise",
+      "d": 670
+     }
+    },
+    {
+     "t": "text",
+     "id": "s3",
+     "x": 300,
+     "y": 862,
+     "w": 860,
+     "h": 36,
+     "text": "Điều gì đã thành công, điều gì phải trả giá",
+     "s": "small",
+     "c": "#4C5A51",
+     "m": {
+      "a": "rise",
+      "d": 710
+     }
+    },
+    {
+     "t": "line",
+     "id": "r4",
+     "x1": 140,
+     "y1": 930,
+     "x2": 1160,
+     "y2": 930,
+     "c": "#D3C7AD",
+     "w": 2,
+     "m": {
+      "a": "draw",
+      "d": 700
+     }
+    },
+    {
+     "t": "rect",
+     "id": "team",
+     "x": 1260,
+     "y": 330,
+     "w": 520,
+     "h": 600,
+     "fill": "#FFFFFF",
+     "alpha": 0.5,
+     "r": 20,
+     "line": {
+      "c": "#D3C7AD",
+      "w": 2
+     },
+     "m": {
+      "a": "rise",
+      "d": 500
+     }
+    },
+    {
+     "t": "text",
+     "id": "teamk",
+     "x": 1310,
+     "y": 378,
+     "w": 420,
+     "h": 30,
+     "text": "Nhóm thực hiện",
+     "s": "eyebrow",
+     "c": "#4C5A51",
+     "m": {
+      "a": "fade",
+      "d": 650
+     }
+    },
+    {
+     "t": "text",
+     "id": "p0",
+     "x": 1310,
+     "y": 438,
+     "w": 440,
+     "h": 42,
+     "text": "Trịnh Thanh Hải",
+     "s": "body",
+     "c": "#14271F",
+     "m": {
+      "a": "rise",
+      "d": 700
+     }
+    },
+    {
+     "t": "text",
+     "id": "p1",
+     "x": 1310,
+     "y": 510,
+     "w": 440,
+     "h": 42,
+     "text": "Lý Diệu Hiền",
+     "s": "body",
+     "c": "#14271F",
+     "m": {
+      "a": "rise",
+      "d": 770
+     }
+    },
+    {
+     "t": "text",
+     "id": "p2",
+     "x": 1310,
+     "y": 582,
+     "w": 440,
+     "h": 42,
+     "text": "Đỗ Thị Hiền",
+     "s": "body",
+     "c": "#14271F",
+     "m": {
+      "a": "rise",
+      "d": 840
+     }
+    },
+    {
+     "t": "text",
+     "id": "p3",
+     "x": 1310,
+     "y": 654,
+     "w": 440,
+     "h": 42,
+     "text": "Nghiêm Thị Thu Hiền",
+     "s": "body",
+     "c": "#14271F",
+     "m": {
+      "a": "rise",
+      "d": 910
+     }
+    },
+    {
+     "t": "text",
+     "id": "p4",
+     "x": 1310,
+     "y": 726,
+     "w": 440,
+     "h": 42,
+     "text": "Dương Duy",
+     "s": "body",
+     "c": "#14271F",
+     "m": {
+      "a": "rise",
+      "d": 980
+     }
+    },
+    {
+     "t": "text",
+     "id": "p5",
+     "x": 1310,
+     "y": 798,
+     "w": 440,
+     "h": 42,
+     "text": "Dương Nguyễn Đức Hiếu",
+     "s": "body",
+     "c": "#14271F",
+     "m": {
+      "a": "rise",
+      "d": 1050
+     }
+    }
+   ],
+   "notes": "Bài trình bày gồm bốn chương: hai doanh nghiệp và động cơ; quá trình thực hiện thương vụ; các yếu tố thúc đẩy và cản trở; cuối cùng là đánh giá kết quả và tổng kết."
+  },
+  {
+   "id": "hook",
+   "section": "Mở đầu",
+   "scene": "dusk",
+   "dark": true,
+   "transition": "fade",
+   "deco": [
+    {
+     "k": "contour",
+     "cx": 1490,
+     "cy": 530,
+     "rx": 470,
+     "ry": 470,
+     "n": 6,
+     "c": "#E3AC5C",
+     "a": 0.07,
+     "rot": 0
+    }
+   ],
+   "els": [
+    {
+     "t": "text",
+     "id": "eyebrow",
+     "x": 140,
+     "y": 112,
+     "w": 1640,
+     "h": 30,
+     "text": "Toàn cảnh thương vụ",
+     "s": "eyebrow",
+     "c": "#E3AC5C",
+     "m": {
+      "a": "fade",
+      "d": 0
+     }
+    },
+    {
+     "t": "text",
+     "id": "title",
+     "x": 140,
+     "y": 152,
+     "w": 1000,
+     "h": 250,
+     "text": "Không mua đứt một lần: Masan nâng sở hữu Phúc Long qua ba bước",
+     "s": "title",
+     "c": "#F4EEE2",
+     "role": "title",
+     "m": {
+      "a": "words",
+      "d": 80
+     }
+    },
+    {
+     "t": "chart",
+     "id": "ring",
+     "x": 1210,
+     "y": 250,
+     "w": 560,
+     "h": 560,
+     "kind": "ring",
+     "vals": [
+      85,
+      15
+     ],
+     "colors": [
+      "#E3AC5C",
+      "#2E4A3D"
+     ],
+     "hole": 80,
+     "m": {
+      "a": "draw",
+      "d": 400
+     }
+    },
+    {
+     "t": "text",
+     "id": "ringv",
+     "x": 1210,
+     "y": 420,
+     "w": 560,
+     "h": 175,
+     "text": "85%",
+     "s": "num",
+     "size": 150,
+     "c": "#F4EEE2",
+     "align": "center",
+     "m": {
+      "a": "count",
+      "d": 500
+     }
+    },
+    {
+     "t": "text",
+     "id": "ringl",
+     "x": 1260,
+     "y": 590,
+     "w": 460,
+     "h": 40,
+     "text": "sở hữu sau ba đợt mua",
+     "s": "small",
+     "c": "#B5C7BC",
+     "align": "center",
+     "m": {
+      "a": "fade",
+      "d": 900
+     }
+    },
+    {
+     "t": "text",
+     "id": "ringc",
+     "x": 1210,
+     "y": 840,
+     "w": 560,
+     "h": 40,
+     "text": "15% còn lại thuộc các cổ đông khác",
+     "s": "small",
+     "c": "#B5C7BC",
+     "align": "center",
+     "m": {
+      "a": "fade",
+      "d": 1100
+     }
+    },
+    {
+     "t": "line",
+     "id": "l1",
+     "x1": 140,
+     "y1": 630,
+     "x2": 540,
+     "y2": 630,
+     "c": "#2E4A3D",
+     "w": 2,
+     "m": {
+      "a": "draw",
+      "d": 500
+     }
+    },
+    {
+     "t": "text",
+     "id": "n1",
+     "x": 140,
+     "y": 650,
+     "w": 400,
+     "h": 145,
+     "text": "15",
+     "s": "num",
+     "size": 120,
+     "c": "#F4EEE2",
+     "m": {
+      "a": "count",
+      "d": 600
+     }
+    },
+    {
+     "t": "text",
+     "id": "t1",
+     "x": 140,
+     "y": 796,
+     "w": 400,
+     "h": 84,
+     "text": "tháng, từ 05/2021 đến 08/2022",
+     "s": "body",
+     "c": "#B5C7BC",
+     "m": {
+      "a": "fade",
+      "d": 800
+     }
+    },
+    {
+     "t": "line",
+     "id": "l2",
+     "x1": 600,
+     "y1": 630,
+     "x2": 1080,
+     "y2": 630,
+     "c": "#2E4A3D",
+     "w": 2,
+     "m": {
+      "a": "draw",
+      "d": 650
+     }
+    },
+    {
+     "t": "text",
+     "id": "n2",
+     "x": 600,
+     "y": 650,
+     "w": 480,
+     "h": 145,
+     "text": "6.450+",
+     "s": "num",
+     "size": 120,
+     "c": "#E3AC5C",
+     "m": {
+      "a": "count",
+      "d": 750
+     }
+    },
+    {
+     "t": "text",
+     "id": "t2",
+     "x": 600,
+     "y": 796,
+     "w": 480,
+     "h": 84,
+     "text": "tỷ đồng tổng giải ngân, khoảng 279,6 triệu USD",
+     "s": "body",
+     "c": "#B5C7BC",
+     "m": {
+      "a": "fade",
+      "d": 950
+     }
+    }
+   ],
+   "notes": "Ba con số tóm tắt thương vụ. Masan không mua toàn bộ Phúc Long trong một lần: đầu tư thiểu số 20% năm 2021, nâng lên chi phối 51% tháng 1/2022, rồi mua thêm 34% tháng 8/2022 để đạt 85%. Tổng giải ngân khoảng 279,6 triệu USD, tức hơn 6.450 tỷ đồng, trong 15 tháng."
+  },
+  {
+   "id": "masan",
+   "section": "01 · Hai doanh nghiệp",
+   "scene": "paper",
+   "dark": false,
+   "transition": "fade",
+   "els": [
+    {
+     "t": "text",
+     "id": "eyebrow",
+     "x": 140,
+     "y": 112,
+     "w": 1640,
+     "h": 30,
+     "text": "01 · Bên mua",
+     "s": "eyebrow",
+     "c": "#93520F",
+     "m": {
+      "a": "fade",
+      "d": 0
+     }
+    },
+    {
+     "t": "text",
+     "id": "title",
+     "x": 140,
+     "y": 152,
+     "w": 1640,
+     "h": 170,
+     "text": "Masan Group: từ sản xuất hàng tiêu dùng sang nền tảng tiêu dùng – bán lẻ",
+     "s": "title",
+     "c": "#14271F",
+     "role": "title",
+     "m": {
+      "a": "words",
+      "d": 80
+     }
+    },
+    {
+     "t": "rect",
+     "id": "wcm",
+     "x": 140,
+     "y": 370,
+     "w": 780,
+     "h": 580,
+     "fill": "#12291F",
+     "r": 24,
+     "morph": "wcm",
+     "name": "!!wcm",
+     "m": {
+      "a": "rise",
+      "d": 300
+     }
+    },
+    {
+     "t": "text",
+     "id": "wk",
+     "x": 196,
+     "y": 418,
+     "w": 660,
+     "h": 30,
+     "text": "Kênh then chốt · bán lẻ",
+     "s": "eyebrow",
+     "c": "#9DCCB1",
+     "m": {
+      "a": "fade",
+      "d": 500
+     }
+    },
+    {
+     "t": "text",
+     "id": "wn",
+     "x": 196,
+     "y": 462,
+     "w": 660,
+     "h": 56,
+     "text": "WinCommerce",
+     "s": "h2",
+     "c": "#F4EEE2",
+     "m": {
+      "a": "rise",
+      "d": 550
+     }
+    },
+    {
+     "t": "text",
+     "id": "ws",
+     "x": 196,
+     "y": 522,
+     "w": 660,
+     "h": 34,
+     "text": "WinMart · WinMart+",
+     "s": "small",
+     "c": "#B5C7BC",
+     "m": {
+      "a": "fade",
+      "d": 600
+     }
+    },
+    {
+     "t": "text",
+     "id": "wv",
+     "x": 196,
+     "y": 588,
+     "w": 660,
+     "h": 165,
+     "text": "2.200+",
+     "s": "num",
+     "size": 140,
+     "c": "#E3AC5C",
+     "m": {
+      "a": "count",
+      "d": 650
+     }
+    },
+    {
+     "t": "text",
+     "id": "wl",
+     "x": 196,
+     "y": 752,
+     "w": 660,
+     "h": 40,
+     "text": "cửa hàng VinMart+ khi công bố hợp tác (05/2021)",
+     "s": "label",
+     "c": "#F4EEE2",
+     "m": {
+      "a": "fade",
+      "d": 800
+     }
+    },
+    {
+     "t": "text",
+     "id": "wd",
+     "x": 196,
+     "y": 806,
+     "w": 680,
+     "h": 90,
+     "text": "Mặt bằng, lưu lượng khách và mạng lưới để thử nghiệm kiosk Phúc Long.",
+     "s": "body",
+     "c": "#B5C7BC",
+     "m": {
+      "a": "fade",
+      "d": 900
+     }
+    },
+    {
+     "t": "line",
+     "id": "pl0",
+     "x1": 1000,
+     "y1": 370,
+     "x2": 1780,
+     "y2": 370,
+     "c": "#D3C7AD",
+     "w": 2,
+     "m": {
+      "a": "draw",
+      "d": 450
+     }
+    },
+    {
+     "t": "text",
+     "id": "pn0",
+     "x": 1000,
+     "y": 394,
+     "w": 780,
+     "h": 40,
+     "text": "Masan Consumer",
+     "s": "h3",
+     "c": "#14271F",
+     "m": {
+      "a": "rise",
+      "d": 500
+     }
+    },
+    {
+     "t": "text",
+     "id": "pd0",
+     "x": 1000,
+     "y": 442,
+     "w": 780,
+     "h": 68,
+     "text": "Sản xuất, xây dựng thương hiệu, phân phối thực phẩm, gia vị, đồ uống",
+     "s": "small",
+     "c": "#4C5A51",
+     "m": {
+      "a": "rise",
+      "d": 540
+     }
+    },
+    {
+     "t": "text",
+     "id": "pk0",
+     "x": 1000,
+     "y": 512,
+     "w": 780,
+     "h": 34,
+     "text": "→ Kinh nghiệm xây dựng thương hiệu tiêu dùng",
+     "s": "small",
+     "c": "#2B6A4E",
+     "w8": 500,
+     "m": {
+      "a": "rise",
+      "d": 580
+     }
+    },
+    {
+     "t": "line",
+     "id": "pl1",
+     "x1": 1000,
+     "y1": 566,
+     "x2": 1780,
+     "y2": 566,
+     "c": "#D3C7AD",
+     "w": 2,
+     "m": {
+      "a": "draw",
+      "d": 570
+     }
+    },
+    {
+     "t": "text",
+     "id": "pn1",
+     "x": 1000,
+     "y": 590,
+     "w": 780,
+     "h": 40,
+     "text": "Masan MEATLife",
+     "s": "h3",
+     "c": "#14271F",
+     "m": {
+      "a": "rise",
+      "d": 620
+     }
+    },
+    {
+     "t": "text",
+     "id": "pd1",
+     "x": 1000,
+     "y": 638,
+     "w": 780,
+     "h": 68,
+     "text": "Thịt có thương hiệu và chuỗi cung ứng liên quan",
+     "s": "small",
+     "c": "#4C5A51",
+     "m": {
+      "a": "rise",
+      "d": 660
+     }
+    },
+    {
+     "t": "text",
+     "id": "pk1",
+     "x": 1000,
+     "y": 708,
+     "w": 780,
+     "h": 34,
+     "text": "→ Năng lực ngành thiết yếu; không trực tiếp tham gia giao dịch",
+     "s": "small",
+     "c": "#2B6A4E",
+     "w8": 500,
+     "m": {
+      "a": "rise",
+      "d": 700
+     }
+    },
+    {
+     "t": "line",
+     "id": "pl2",
+     "x1": 1000,
+     "y1": 762,
+     "x2": 1780,
+     "y2": 762,
+     "c": "#D3C7AD",
+     "w": 2,
+     "m": {
+      "a": "draw",
+      "d": 690
+     }
+    },
+    {
+     "t": "text",
+     "id": "pn2",
+     "x": 1000,
+     "y": 786,
+     "w": 780,
+     "h": 40,
+     "text": "The CrownX / Point of Life",
+     "s": "h3",
+     "c": "#14271F",
+     "m": {
+      "a": "rise",
+      "d": 740
+     }
+    },
+    {
+     "t": "text",
+     "id": "pd2",
+     "x": 1000,
+     "y": 834,
+     "w": 780,
+     "h": 68,
+     "text": "Nền tảng kết nối bán lẻ và hàng tiêu dùng",
+     "s": "small",
+     "c": "#4C5A51",
+     "m": {
+      "a": "rise",
+      "d": 780
+     }
+    },
+    {
+     "t": "text",
+     "id": "pk2",
+     "x": 1000,
+     "y": 904,
+     "w": 780,
+     "h": 34,
+     "text": "→ Bối cảnh chiến lược để tích hợp Phúc Long",
+     "s": "small",
+     "c": "#2B6A4E",
+     "w8": 500,
+     "m": {
+      "a": "rise",
+      "d": 820
+     }
+    }
+   ],
+   "deco": [
+    {
+     "k": "contour",
+     "cx": 1880,
+     "cy": 120,
+     "rx": 360,
+     "ry": 220,
+     "n": 6,
+     "c": "#5E9C7C",
+     "a": 0.1,
+     "rot": -10
+    }
+   ],
+   "notes": "Masan Group (MSN) là tập đoàn đa ngành tập trung vào nhu cầu tiêu dùng thiết yếu. Trong bốn nền tảng liên quan, WinCommerce là kênh then chốt: khi công bố hợp tác tháng 5/2021, VinCommerce có hơn 2.200 cửa hàng VinMart+, là mặt bằng để thử nghiệm kiosk Phúc Long. Masan Consumer cho kinh nghiệm xây dựng thương hiệu; MEATLife không trực tiếp tham gia giao dịch; The CrownX / Point of Life là bối cảnh chiến lược."
+  },
+  {
+   "id": "pol",
+   "section": "01 · Hai doanh nghiệp",
+   "scene": "dusk",
+   "dark": true,
+   "transition": "morph",
+   "els": [
+    {
+     "t": "text",
+     "id": "eyebrow",
+     "x": 140,
+     "y": 112,
+     "w": 1640,
+     "h": 30,
+     "text": "01 · Point of Life",
+     "s": "eyebrow",
+     "c": "#E3AC5C",
+     "m": {
+      "a": "fade",
+      "d": 0
+     }
+    },
+    {
+     "t": "text",
+     "id": "title",
+     "x": 140,
+     "y": 152,
+     "w": 1640,
+     "h": 170,
+     "text": "Point of Life: gom nhu cầu thiết yếu về một điểm chạm",
+     "s": "title",
+     "c": "#F4EEE2",
+     "role": "title",
+     "m": {
+      "a": "words",
+      "d": 80
+     }
+    },
+    {
+     "t": "text",
+     "id": "p",
+     "x": 140,
+     "y": 384,
+     "w": 560,
+     "h": 260,
+     "text": "Thay vì chỉ sản xuất rồi phân phối qua trung gian, Masan muốn hiện diện trong hành trình tiêu dùng hằng ngày. Năm 2022, Masan mô tả WinMart+ như một mini-mall tích hợp nhiều nhu cầu thiết yếu.",
+     "s": "body",
+     "c": "#B5C7BC",
+     "m": {
+      "a": "fade",
+      "d": 300
+     }
+    },
+    {
+     "t": "text",
+     "id": "q",
+     "x": 140,
+     "y": 670,
+     "w": 80,
+     "h": 130,
+     "text": "“",
+     "s": "num",
+     "size": 110,
+     "c": "#E3AC5C",
+     "m": {
+      "a": "fade",
+      "d": 600
+     }
+    },
+    {
+     "t": "text",
+     "id": "qt",
+     "x": 220,
+     "y": 690,
+     "w": 480,
+     "h": 200,
+     "text": "Đồ uống pha chế thêm một lý do để khách ghé, ở lại lâu hơn và mua thêm tại cùng điểm bán.",
+     "s": "body",
+     "c": "#F4EEE2",
+     "w8": 500,
+     "m": {
+      "a": "rise",
+      "d": 650
+     }
+    },
+    {
+     "t": "line",
+     "id": "ln_pl",
+     "x1": 1270,
+     "y1": 650,
+     "x2": 1270,
+     "y2": 360,
+     "c": "#E3AC5C",
+     "w": 3,
+     "dash": true,
+     "m": {
+      "a": "draw",
+      "d": 700
+     }
+    },
+    {
+     "t": "line",
+     "id": "ln_mc",
+     "x1": 1270,
+     "y1": 650,
+     "x2": 930,
+     "y2": 500,
+     "c": "#2E4A3D",
+     "w": 2,
+     "m": {
+      "a": "draw",
+      "d": 790
+     }
+    },
+    {
+     "t": "line",
+     "id": "ln_wm",
+     "x1": 1270,
+     "y1": 650,
+     "x2": 1610,
+     "y2": 500,
+     "c": "#2E4A3D",
+     "w": 2,
+     "m": {
+      "a": "draw",
+      "d": 880
+     }
+    },
+    {
+     "t": "line",
+     "id": "ln_me",
+     "x1": 1270,
+     "y1": 650,
+     "x2": 990,
+     "y2": 880,
+     "c": "#2E4A3D",
+     "w": 2,
+     "m": {
+      "a": "draw",
+      "d": 970
+     }
+    },
+    {
+     "t": "line",
+     "id": "ln_tc",
+     "x1": 1270,
+     "y1": 650,
+     "x2": 1550,
+     "y2": 880,
+     "c": "#2E4A3D",
+     "w": 2,
+     "m": {
+      "a": "draw",
+      "d": 1060
+     }
+    },
+    {
+     "t": "ellipse",
+     "id": "core",
+     "x": 1120,
+     "y": 500,
+     "w": 300,
+     "h": 300,
+     "fill": "#1B3A2C",
+     "line": {
+      "c": "#9DCCB1",
+      "w": 2
+     },
+     "morph": "wcm",
+     "name": "!!wcm",
+     "m": {
+      "a": "scale",
+      "d": 250
+     }
+    },
+    {
+     "t": "text",
+     "id": "corek",
+     "x": 1120,
+     "y": 590,
+     "w": 300,
+     "h": 36,
+     "text": "Điểm bán",
+     "s": "small",
+     "c": "#B5C7BC",
+     "align": "center",
+     "m": {
+      "a": "fade",
+      "d": 500
+     }
+    },
+    {
+     "t": "text",
+     "id": "corev",
+     "x": 1120,
+     "y": 628,
+     "w": 300,
+     "h": 56,
+     "text": "WinMart+",
+     "s": "h3",
+     "size": 40,
+     "c": "#F4EEE2",
+     "align": "center",
+     "m": {
+      "a": "fade",
+      "d": 550
+     }
+    },
+    {
+     "t": "rect",
+     "id": "s_pl",
+     "x": 1105,
+     "y": 310,
+     "w": 330,
+     "h": 100,
+     "fill": "#E3AC5C",
+     "alpha": 1,
+     "r": 18,
+     "line": null,
+     "m": {
+      "a": "scale",
+      "d": 800
+     }
+    },
+    {
+     "t": "text",
+     "id": "sa_pl",
+     "x": 1129,
+     "y": 326,
+     "w": 290,
+     "h": 34,
+     "text": "Phúc Long",
+     "s": "label",
+     "c": "#14271F",
+     "m": {
+      "a": "fade",
+      "d": 860
+     }
+    },
+    {
+     "t": "text",
+     "id": "sb_pl",
+     "x": 1129,
+     "y": 364,
+     "w": 290,
+     "h": 32,
+     "text": "Đồ uống pha chế · mới",
+     "s": "small",
+     "c": "#14271F",
+     "m": {
+      "a": "fade",
+      "d": 900
+     }
+    },
+    {
+     "t": "rect",
+     "id": "s_mc",
+     "x": 765,
+     "y": 450,
+     "w": 330,
+     "h": 100,
+     "fill": "#FFFFFF",
+     "alpha": 0.07,
+     "r": 18,
+     "line": {
+      "c": "#2E4A3D",
+      "w": 2
+     },
+     "m": {
+      "a": "scale",
+      "d": 890
+     }
+    },
+    {
+     "t": "text",
+     "id": "sa_mc",
+     "x": 789,
+     "y": 466,
+     "w": 290,
+     "h": 34,
+     "text": "Masan Consumer",
+     "s": "label",
+     "c": "#F4EEE2",
+     "m": {
+      "a": "fade",
+      "d": 950
+     }
+    },
+    {
+     "t": "text",
+     "id": "sb_mc",
+     "x": 789,
+     "y": 504,
+     "w": 290,
+     "h": 32,
+     "text": "Hàng tiêu dùng nhanh",
+     "s": "small",
+     "c": "#B5C7BC",
+     "m": {
+      "a": "fade",
+      "d": 990
+     }
+    },
+    {
+     "t": "rect",
+     "id": "s_wm",
+     "x": 1445,
+     "y": 450,
+     "w": 330,
+     "h": 100,
+     "fill": "#FFFFFF",
+     "alpha": 0.07,
+     "r": 18,
+     "line": {
+      "c": "#2E4A3D",
+      "w": 2
+     },
+     "m": {
+      "a": "scale",
+      "d": 980
+     }
+    },
+    {
+     "t": "text",
+     "id": "sa_wm",
+     "x": 1469,
+     "y": 466,
+     "w": 290,
+     "h": 34,
+     "text": "WinMart",
+     "s": "label",
+     "c": "#F4EEE2",
+     "m": {
+      "a": "fade",
+      "d": 1040
+     }
+    },
+    {
+     "t": "text",
+     "id": "sb_wm",
+     "x": 1469,
+     "y": 504,
+     "w": 290,
+     "h": 32,
+     "text": "Thực phẩm thiết yếu",
+     "s": "small",
+     "c": "#B5C7BC",
+     "m": {
+      "a": "fade",
+      "d": 1080
+     }
+    },
+    {
+     "t": "rect",
+     "id": "s_me",
+     "x": 825,
+     "y": 830,
+     "w": 330,
+     "h": 100,
+     "fill": "#FFFFFF",
+     "alpha": 0.07,
+     "r": 18,
+     "line": {
+      "c": "#2E4A3D",
+      "w": 2
+     },
+     "m": {
+      "a": "scale",
+      "d": 1070
+     }
+    },
+    {
+     "t": "text",
+     "id": "sa_me",
+     "x": 849,
+     "y": 846,
+     "w": 290,
+     "h": 34,
+     "text": "Masan MEATLife",
+     "s": "label",
+     "c": "#F4EEE2",
+     "m": {
+      "a": "fade",
+      "d": 1130
+     }
+    },
+    {
+     "t": "text",
+     "id": "sb_me",
+     "x": 849,
+     "y": 884,
+     "w": 290,
+     "h": 32,
+     "text": "Thịt có thương hiệu",
+     "s": "small",
+     "c": "#B5C7BC",
+     "m": {
+      "a": "fade",
+      "d": 1170
+     }
+    },
+    {
+     "t": "rect",
+     "id": "s_tc",
+     "x": 1385,
+     "y": 830,
+     "w": 330,
+     "h": 100,
+     "fill": "#FFFFFF",
+     "alpha": 0.07,
+     "r": 18,
+     "line": {
+      "c": "#2E4A3D",
+      "w": 2
+     },
+     "m": {
+      "a": "scale",
+      "d": 1160
+     }
+    },
+    {
+     "t": "text",
+     "id": "sa_tc",
+     "x": 1409,
+     "y": 846,
+     "w": 290,
+     "h": 34,
+     "text": "Techcombank",
+     "s": "label",
+     "c": "#F4EEE2",
+     "m": {
+      "a": "fade",
+      "d": 1220
+     }
+    },
+    {
+     "t": "text",
+     "id": "sb_tc",
+     "x": 1409,
+     "y": 884,
+     "w": 290,
+     "h": 32,
+     "text": "Dịch vụ tài chính",
+     "s": "small",
+     "c": "#B5C7BC",
+     "m": {
+      "a": "fade",
+      "d": 1260
+     }
+    }
+   ],
+   "deco": [
+    {
+     "k": "contour",
+     "cx": 1270,
+     "cy": 650,
+     "rx": 600,
+     "ry": 420,
+     "n": 7,
+     "c": "#9DCCB1",
+     "a": 0.06,
+     "rot": 0
+    }
+   ],
+   "notes": "Point of Life là định hướng hệ sinh thái tiêu dùng của Masan: kết nối nhiều sản phẩm và dịch vụ thiết yếu tại những điểm chạm thuận tiện. WinCommerce giúp tiếp cận người mua, nhưng để tăng gắn kết, Masan cần sản phẩm có tần suất và trải nghiệm khác với mua hàng thiết yếu. Phúc Long là mảnh ghép đồ uống pha chế đó. (Khối WinCommerce ở slide trước “biến hình” thành điểm bán trung tâm.)"
+  },
+  {
+   "id": "phuclong",
+   "section": "01 · Hai doanh nghiệp",
+   "scene": "paper",
+   "dark": false,
+   "transition": "fade",
+   "els": [
+    {
+     "t": "text",
+     "id": "eyebrow",
+     "x": 140,
+     "y": 112,
+     "w": 1640,
+     "h": 30,
+     "text": "01 · Doanh nghiệp mục tiêu",
+     "s": "eyebrow",
+     "c": "#93520F",
+     "m": {
+      "a": "fade",
+      "d": 0
+     }
+    },
+    {
+     "t": "text",
+     "id": "title",
+     "x": 140,
+     "y": 152,
+     "w": 1640,
+     "h": 170,
+     "text": "Phúc Long Heritage: di sản trà Việt từ năm 1968",
+     "s": "title",
+     "c": "#14271F",
+     "role": "title",
+     "m": {
+      "a": "words",
+      "d": 80
+     }
+    },
+    {
+     "t": "image",
+     "id": "photo",
+     "x": 140,
+     "y": 330,
+     "w": 700,
+     "h": 527,
+     "src": "assets/images/phuclong-store-r.png",
+     "alt": "Mặt tiền một cửa hàng Phúc Long Coffee & Tea về đêm, hai tầng, nhiều cây xanh",
+     "r": 16,
+     "m": {
+      "a": "mask",
+      "d": 250
+     }
+    },
+    {
+     "t": "text",
+     "id": "adv",
+     "x": 140,
+     "y": 884,
+     "w": 700,
+     "h": 70,
+     "text": "Lợi thế trước thương vụ: di sản thương hiệu, sản phẩm riêng, tệp khách trẻ đô thị, kinh nghiệm vận hành cửa hàng.",
+     "s": "small",
+     "c": "#4C5A51",
+     "m": {
+      "a": "fade",
+      "d": 700
+     }
+    },
+    {
+     "t": "line",
+     "id": "axis",
+     "x1": 960,
+     "y1": 350,
+     "x2": 960,
+     "y2": 900,
+     "c": "#D3C7AD",
+     "w": 2,
+     "m": {
+      "a": "draw",
+      "d": 400
+     }
+    },
+    {
+     "t": "ellipse",
+     "id": "d0",
+     "x": 951,
+     "y": 353,
+     "w": 18,
+     "h": 18,
+     "fill": "#93520F",
+     "m": {
+      "a": "scale",
+      "d": 500
+     }
+    },
+    {
+     "t": "text",
+     "id": "y0",
+     "x": 1000,
+     "y": 336,
+     "w": 210,
+     "h": 54,
+     "text": "1968",
+     "s": "num",
+     "size": 40,
+     "c": "#93520F",
+     "m": {
+      "a": "rise",
+      "d": 540
+     }
+    },
+    {
+     "t": "text",
+     "id": "x0",
+     "x": 1220,
+     "y": 342,
+     "w": 560,
+     "h": 120,
+     "text": "Khởi nguồn tại Bảo Lộc, Lâm Đồng, từ hoạt động phát triển trà và cà phê.",
+     "s": "body",
+     "c": "#4C5A51",
+     "m": {
+      "a": "rise",
+      "d": 580
+     }
+    },
+    {
+     "t": "ellipse",
+     "id": "d1",
+     "x": 951,
+     "y": 529,
+     "w": 18,
+     "h": 18,
+     "fill": "#93520F",
+     "m": {
+      "a": "scale",
+      "d": 640
+     }
+    },
+    {
+     "t": "text",
+     "id": "y1",
+     "x": 1000,
+     "y": 512,
+     "w": 210,
+     "h": 54,
+     "text": "Đầu 1980",
+     "s": "num",
+     "size": 40,
+     "c": "#93520F",
+     "m": {
+      "a": "rise",
+      "d": 680
+     }
+    },
+    {
+     "t": "text",
+     "id": "x1",
+     "x": 1220,
+     "y": 518,
+     "w": 560,
+     "h": 120,
+     "text": "Mô hình trà, cà phê tự phục vụ tại TP.HCM.",
+     "s": "body",
+     "c": "#4C5A51",
+     "m": {
+      "a": "rise",
+      "d": 720
+     }
+    },
+    {
+     "t": "ellipse",
+     "id": "d2",
+     "x": 951,
+     "y": 705,
+     "w": 18,
+     "h": 18,
+     "fill": "#93520F",
+     "m": {
+      "a": "scale",
+      "d": 780
+     }
+    },
+    {
+     "t": "text",
+     "id": "y2",
+     "x": 1000,
+     "y": 688,
+     "w": 210,
+     "h": 54,
+     "text": "2012",
+     "s": "num",
+     "size": 40,
+     "c": "#93520F",
+     "m": {
+      "a": "rise",
+      "d": 820
+     }
+    },
+    {
+     "t": "text",
+     "id": "x2",
+     "x": 1220,
+     "y": 694,
+     "w": 560,
+     "h": 120,
+     "text": "Cửa hàng tại TTTM Quận 7, chính thức vào bán lẻ F&B hiện đại.",
+     "s": "body",
+     "c": "#4C5A51",
+     "m": {
+      "a": "rise",
+      "d": 860
+     }
+    },
+    {
+     "t": "ellipse",
+     "id": "d3",
+     "x": 951,
+     "y": 881,
+     "w": 18,
+     "h": 18,
+     "fill": "#93520F",
+     "m": {
+      "a": "scale",
+      "d": 920
+     }
+    },
+    {
+     "t": "text",
+     "id": "y3",
+     "x": 1000,
+     "y": 864,
+     "w": 210,
+     "h": 54,
+     "text": "05/2021",
+     "s": "num",
+     "size": 40,
+     "c": "#93520F",
+     "m": {
+      "a": "rise",
+      "d": 960
+     }
+    },
+    {
+     "t": "text",
+     "id": "x3",
+     "x": 1220,
+     "y": 870,
+     "w": 560,
+     "h": 120,
+     "text": "82 cửa hàng trên toàn quốc khi Masan công bố giao dịch.",
+     "s": "body",
+     "c": "#4C5A51",
+     "m": {
+      "a": "rise",
+      "d": 1000
+     }
+    }
+   ],
+   "deco": [
+    {
+     "k": "leaf",
+     "x": 1700,
+     "y": 1010,
+     "s": 1.3,
+     "rot": -30,
+     "c": "#5E9C7C",
+     "a": 0.18
+    },
+    {
+     "k": "leaf",
+     "x": 1820,
+     "y": 930,
+     "s": 0.8,
+     "rot": 20,
+     "c": "#5E9C7C",
+     "a": 0.14
+    }
+   ],
+   "notes": "Phúc Long là thương hiệu trà và cà phê Việt khởi nguồn năm 1968 tại Bảo Lộc. Pháp nhân trong giao dịch là Công ty Cổ phần Phúc Long Heritage. Năm lợi thế trước thương vụ: di sản thương hiệu, năng lực sản phẩm, tệp khách trẻ đô thị, kinh nghiệm vận hành cửa hàng và tiềm năng mở rộng sang điểm bán nhỏ, kênh trực tuyến. Ảnh: mặt tiền một cửa hàng Phúc Long (từ tài liệu của nhóm)."
+  },
+  {
+   "id": "context",
+   "section": "01 · Hai doanh nghiệp",
+   "scene": "split",
+   "dark": true,
+   "transition": "fade",
+   "els": [
+    {
+     "t": "text",
+     "id": "eyebrow",
+     "x": 140,
+     "y": 112,
+     "w": 1640,
+     "h": 30,
+     "text": "01 · Bối cảnh",
+     "s": "eyebrow",
+     "c": "#E3AC5C",
+     "m": {
+      "a": "fade",
+      "d": 0
+     }
+    },
+    {
+     "t": "text",
+     "id": "title",
+     "x": 140,
+     "y": 152,
+     "w": 1640,
+     "h": 170,
+     "text": "Hai nhu cầu gặp nhau đúng thời điểm",
+     "s": "title",
+     "c": "#F4EEE2",
+     "role": "title",
+     "m": {
+      "a": "words",
+      "d": 80
+     }
+    },
+    {
+     "t": "text",
+     "id": "lk",
+     "x": 140,
+     "y": 360,
+     "w": 700,
+     "h": 30,
+     "text": "Masan cần",
+     "s": "eyebrow",
+     "c": "#9DCCB1",
+     "m": {
+      "a": "fade",
+      "d": 300
+     }
+    },
+    {
+     "t": "text",
+     "id": "lh",
+     "x": 140,
+     "y": 404,
+     "w": 700,
+     "h": 112,
+     "text": "Một lý do để khách ghé cửa hàng thường xuyên hơn",
+     "s": "h2",
+     "c": "#F4EEE2",
+     "m": {
+      "a": "rise",
+      "d": 350
+     }
+    },
+    {
+     "t": "text",
+     "id": "lb",
+     "x": 140,
+     "y": 548,
+     "w": 700,
+     "h": 210,
+     "text": "Đồ uống pha chế có tần suất và trải nghiệm khác hàng thiết yếu: kéo khách ghé, giữ khách lâu hơn và tạo thêm doanh thu trên cùng điểm bán WinMart+.",
+     "s": "body",
+     "c": "#B5C7BC",
+     "m": {
+      "a": "fade",
+      "d": 450
+     }
+    },
+    {
+     "t": "text",
+     "id": "rk",
+     "x": 1080,
+     "y": 360,
+     "w": 700,
+     "h": 30,
+     "text": "Phúc Long cần",
+     "s": "eyebrow",
+     "c": "#E3AC5C",
+     "m": {
+      "a": "fade",
+      "d": 600
+     }
+    },
+    {
+     "t": "text",
+     "id": "rh",
+     "x": 1080,
+     "y": 404,
+     "w": 700,
+     "h": 112,
+     "text": "Nguồn lực để mở rộng chuỗi nhanh hơn",
+     "s": "h2",
+     "c": "#F4EEE2",
+     "m": {
+      "a": "rise",
+      "d": 650
+     }
+    },
+    {
+     "t": "text",
+     "id": "rb",
+     "x": 1080,
+     "y": 548,
+     "w": 700,
+     "h": 130,
+     "text": "Đã có thương hiệu, sản phẩm và tệp khách trẻ đô thị, nhưng mở rộng nhanh một chuỗi F&B đòi hỏi:",
+     "s": "body",
+     "c": "#B5C7BC",
+     "m": {
+      "a": "fade",
+      "d": 750
+     }
+    },
+    {
+     "t": "box",
+     "id": "c00",
+     "x": 1080,
+     "y": 706,
+     "w": 192,
+     "h": 56,
+     "text": "Vốn đầu tư",
+     "s": "small",
+     "fill": "#E3AC5C",
+     "alpha": 0.16,
+     "line": {
+      "c": "#E3AC5C",
+      "w": 2
+     },
+     "r": 28,
+     "c": "#F4EEE2",
+     "align": "center",
+     "m": {
+      "a": "scale",
+      "d": 850
+     }
+    },
+    {
+     "t": "box",
+     "id": "c01",
+     "x": 1288,
+     "y": 706,
+     "w": 164,
+     "h": 56,
+     "text": "Mặt bằng",
+     "s": "small",
+     "fill": "#E3AC5C",
+     "alpha": 0.16,
+     "line": {
+      "c": "#E3AC5C",
+      "w": 2
+     },
+     "r": 28,
+     "c": "#F4EEE2",
+     "align": "center",
+     "m": {
+      "a": "scale",
+      "d": 920
+     }
+    },
+    {
+     "t": "box",
+     "id": "c02",
+     "x": 1468,
+     "y": 706,
+     "w": 248,
+     "h": 56,
+     "text": "Quản trị chuỗi",
+     "s": "small",
+     "fill": "#E3AC5C",
+     "alpha": 0.16,
+     "line": {
+      "c": "#E3AC5C",
+      "w": 2
+     },
+     "r": 28,
+     "c": "#F4EEE2",
+     "align": "center",
+     "m": {
+      "a": "scale",
+      "d": 990
+     }
+    },
+    {
+     "t": "box",
+     "id": "c10",
+     "x": 1080,
+     "y": 778,
+     "w": 150,
+     "h": 56,
+     "text": "Nhân sự",
+     "s": "small",
+     "fill": "#E3AC5C",
+     "alpha": 0.16,
+     "line": {
+      "c": "#E3AC5C",
+      "w": 2
+     },
+     "r": 28,
+     "c": "#F4EEE2",
+     "align": "center",
+     "m": {
+      "a": "scale",
+      "d": 1060
+     }
+    },
+    {
+     "t": "box",
+     "id": "c11",
+     "x": 1246,
+     "y": 778,
+     "w": 178,
+     "h": 56,
+     "text": "Công nghệ",
+     "s": "small",
+     "fill": "#E3AC5C",
+     "alpha": 0.16,
+     "line": {
+      "c": "#E3AC5C",
+      "w": 2
+     },
+     "r": 28,
+     "c": "#F4EEE2",
+     "align": "center",
+     "m": {
+      "a": "scale",
+      "d": 1130
+     }
+    },
+    {
+     "t": "box",
+     "id": "c12",
+     "x": 1440,
+     "y": 778,
+     "w": 206,
+     "h": 56,
+     "text": "Nguồn khách",
+     "s": "small",
+     "fill": "#E3AC5C",
+     "alpha": 0.16,
+     "line": {
+      "c": "#E3AC5C",
+      "w": 2
+     },
+     "r": 28,
+     "c": "#F4EEE2",
+     "align": "center",
+     "m": {
+      "a": "scale",
+      "d": 1200
+     }
+    },
+    {
+     "t": "line",
+     "id": "rule",
+     "x1": 140,
+     "y1": 930,
+     "x2": 1780,
+     "y2": 930,
+     "c": "#2E4A3D",
+     "w": 2,
+     "m": {
+      "a": "draw",
+      "d": 900
+     }
+    },
+    {
+     "t": "text",
+     "id": "time",
+     "x": 140,
+     "y": 950,
+     "w": 1640,
+     "h": 40,
+     "text": "Thời điểm: giao dịch công bố tháng 5/2021, khi nền kinh tế và ngành dịch vụ chịu ảnh hưởng của COVID-19.",
+     "s": "small",
+     "c": "#B5C7BC",
+     "m": {
+      "a": "fade",
+      "d": 1000
+     }
+    }
+   ],
+   "deco": [],
+   "notes": "Masan đang chuyển từ mô hình sản xuất – phân phối sang tích hợp tiêu dùng – bán lẻ; WinCommerce giúp tiếp cận người mua nhưng cần thêm sản phẩm có tần suất sử dụng khác. Phúc Long đã có thương hiệu và sản phẩm nhưng cần vốn, mặt bằng, quản trị chuỗi, nhân sự, công nghệ và nguồn khách để mở rộng nhanh. Hai nửa màu nền thể hiện hai phía của thương vụ."
+  },
+  {
+   "id": "motives",
+   "section": "01 · Hai doanh nghiệp",
+   "scene": "paper",
+   "dark": false,
+   "transition": "fade",
+   "els": [
+    {
+     "t": "text",
+     "id": "eyebrow",
+     "x": 140,
+     "y": 112,
+     "w": 1640,
+     "h": 30,
+     "text": "01 · Động cơ",
+     "s": "eyebrow",
+     "c": "#93520F",
+     "m": {
+      "a": "fade",
+      "d": 0
+     }
+    },
+    {
+     "t": "text",
+     "id": "title",
+     "x": 140,
+     "y": 152,
+     "w": 1640,
+     "h": 170,
+     "text": "Động cơ hai chiều: Masan cần mảnh ghép F&B, Phúc Long cần bệ phóng",
+     "s": "title",
+     "c": "#14271F",
+     "role": "title",
+     "m": {
+      "a": "words",
+      "d": 80
+     }
+    },
+    {
+     "t": "text",
+     "id": "lk",
+     "x": 140,
+     "y": 352,
+     "w": 740,
+     "h": 30,
+     "text": "Masan · bên mua",
+     "s": "eyebrow",
+     "c": "#2B6A4E",
+     "m": {
+      "a": "fade",
+      "d": 250
+     }
+    },
+    {
+     "t": "text",
+     "id": "rk",
+     "x": 1040,
+     "y": 352,
+     "w": 740,
+     "h": 30,
+     "text": "Phúc Long · bên được đầu tư",
+     "s": "eyebrow",
+     "c": "#93520F",
+     "m": {
+      "a": "fade",
+      "d": 250
+     }
+    },
+    {
+     "t": "line",
+     "id": "axis",
+     "x1": 960,
+     "y1": 352,
+     "x2": 960,
+     "y2": 940,
+     "c": "#D3C7AD",
+     "w": 2,
+     "m": {
+      "a": "draw",
+      "d": 300
+     }
+    },
+    {
+     "t": "line",
+     "id": "l00",
+     "x1": 140,
+     "y1": 400,
+     "x2": 880,
+     "y2": 400,
+     "c": "#D3C7AD",
+     "w": 2,
+     "m": {
+      "a": "draw",
+      "d": 350
+     }
+    },
+    {
+     "t": "text",
+     "id": "n00",
+     "x": 140,
+     "y": 416,
+     "w": 46,
+     "h": 40,
+     "text": "1",
+     "s": "num",
+     "size": 32,
+     "c": "#2B6A4E",
+     "m": {
+      "a": "fade",
+      "d": 390
+     }
+    },
+    {
+     "t": "text",
+     "id": "a00",
+     "x": 190,
+     "y": 416,
+     "w": 690,
+     "h": 36,
+     "text": "Gia nhập nhanh ngành trà – cà phê",
+     "s": "label",
+     "c": "#14271F",
+     "m": {
+      "a": "rise",
+      "d": 410
+     }
+    },
+    {
+     "t": "text",
+     "id": "b00",
+     "x": 190,
+     "y": 454,
+     "w": 690,
+     "h": 34,
+     "text": "Mua thương hiệu sẵn có thay vì tự xây từ đầu",
+     "s": "small",
+     "c": "#4C5A51",
+     "m": {
+      "a": "rise",
+      "d": 440
+     }
+    },
+    {
+     "t": "line",
+     "id": "l01",
+     "x1": 140,
+     "y1": 508,
+     "x2": 880,
+     "y2": 508,
+     "c": "#D3C7AD",
+     "w": 2,
+     "m": {
+      "a": "draw",
+      "d": 440
+     }
+    },
+    {
+     "t": "text",
+     "id": "n01",
+     "x": 140,
+     "y": 524,
+     "w": 46,
+     "h": 40,
+     "text": "2",
+     "s": "num",
+     "size": 32,
+     "c": "#2B6A4E",
+     "m": {
+      "a": "fade",
+      "d": 480
+     }
+    },
+    {
+     "t": "text",
+     "id": "a01",
+     "x": 190,
+     "y": 524,
+     "w": 690,
+     "h": 36,
+     "text": "Bổ sung mảnh ghép cho Point of Life",
+     "s": "label",
+     "c": "#14271F",
+     "m": {
+      "a": "rise",
+      "d": 500
+     }
+    },
+    {
+     "t": "text",
+     "id": "b01",
+     "x": 190,
+     "y": 562,
+     "w": 690,
+     "h": 34,
+     "text": "Thêm nhu cầu được phục vụ tại một điểm bán",
+     "s": "small",
+     "c": "#4C5A51",
+     "m": {
+      "a": "rise",
+      "d": 530
+     }
+    },
+    {
+     "t": "line",
+     "id": "l02",
+     "x1": 140,
+     "y1": 616,
+     "x2": 880,
+     "y2": 616,
+     "c": "#D3C7AD",
+     "w": 2,
+     "m": {
+      "a": "draw",
+      "d": 530
+     }
+    },
+    {
+     "t": "text",
+     "id": "n02",
+     "x": 140,
+     "y": 632,
+     "w": 46,
+     "h": 40,
+     "text": "3",
+     "s": "num",
+     "size": 32,
+     "c": "#2B6A4E",
+     "m": {
+      "a": "fade",
+      "d": 570
+     }
+    },
+    {
+     "t": "text",
+     "id": "a02",
+     "x": 190,
+     "y": 632,
+     "w": 690,
+     "h": 36,
+     "text": "Khai thác mạng lưới WinMart+",
+     "s": "label",
+     "c": "#14271F",
+     "m": {
+      "a": "rise",
+      "d": 590
+     }
+    },
+    {
+     "t": "text",
+     "id": "b02",
+     "x": 190,
+     "y": 670,
+     "w": 690,
+     "h": 34,
+     "text": "Thử nghiệm kiosk trên mặt bằng, lưu lượng sẵn có",
+     "s": "small",
+     "c": "#4C5A51",
+     "m": {
+      "a": "rise",
+      "d": 620
+     }
+    },
+    {
+     "t": "line",
+     "id": "l03",
+     "x1": 140,
+     "y1": 724,
+     "x2": 880,
+     "y2": 724,
+     "c": "#D3C7AD",
+     "w": 2,
+     "m": {
+      "a": "draw",
+      "d": 620
+     }
+    },
+    {
+     "t": "text",
+     "id": "n03",
+     "x": 140,
+     "y": 740,
+     "w": 46,
+     "h": 40,
+     "text": "4",
+     "s": "num",
+     "size": 32,
+     "c": "#2B6A4E",
+     "m": {
+      "a": "fade",
+      "d": 660
+     }
+    },
+    {
+     "t": "text",
+     "id": "a03",
+     "x": 190,
+     "y": 740,
+     "w": 690,
+     "h": 36,
+     "text": "Tạo cộng hưởng doanh thu",
+     "s": "label",
+     "c": "#14271F",
+     "m": {
+      "a": "rise",
+      "d": 680
+     }
+    },
+    {
+     "t": "text",
+     "id": "b03",
+     "x": 190,
+     "y": 778,
+     "w": 690,
+     "h": 34,
+     "text": "Khách mua đồ uống mua thêm hàng hóa, và ngược lại",
+     "s": "small",
+     "c": "#4C5A51",
+     "m": {
+      "a": "rise",
+      "d": 710
+     }
+    },
+    {
+     "t": "line",
+     "id": "l04",
+     "x1": 140,
+     "y1": 832,
+     "x2": 880,
+     "y2": 832,
+     "c": "#D3C7AD",
+     "w": 2,
+     "m": {
+      "a": "draw",
+      "d": 710
+     }
+    },
+    {
+     "t": "text",
+     "id": "n04",
+     "x": 140,
+     "y": 848,
+     "w": 46,
+     "h": 40,
+     "text": "5",
+     "s": "num",
+     "size": 32,
+     "c": "#2B6A4E",
+     "m": {
+      "a": "fade",
+      "d": 750
+     }
+    },
+    {
+     "t": "text",
+     "id": "a04",
+     "x": 190,
+     "y": 848,
+     "w": 690,
+     "h": 36,
+     "text": "Đa dạng hóa nguồn tăng trưởng",
+     "s": "label",
+     "c": "#14271F",
+     "m": {
+      "a": "rise",
+      "d": 770
+     }
+    },
+    {
+     "t": "text",
+     "id": "b04",
+     "x": 190,
+     "y": 886,
+     "w": 690,
+     "h": 34,
+     "text": "Thêm F&B bên cạnh hàng tiêu dùng và bán lẻ",
+     "s": "small",
+     "c": "#4C5A51",
+     "m": {
+      "a": "rise",
+      "d": 800
+     }
+    },
+    {
+     "t": "line",
+     "id": "l10",
+     "x1": 1040,
+     "y1": 400,
+     "x2": 1780,
+     "y2": 400,
+     "c": "#D3C7AD",
+     "w": 2,
+     "m": {
+      "a": "draw",
+      "d": 550
+     }
+    },
+    {
+     "t": "text",
+     "id": "n10",
+     "x": 1040,
+     "y": 416,
+     "w": 46,
+     "h": 40,
+     "text": "1",
+     "s": "num",
+     "size": 32,
+     "c": "#93520F",
+     "m": {
+      "a": "fade",
+      "d": 590
+     }
+    },
+    {
+     "t": "text",
+     "id": "a10",
+     "x": 1090,
+     "y": 416,
+     "w": 690,
+     "h": 36,
+     "text": "Vốn của cổ đông chiến lược",
+     "s": "label",
+     "c": "#14271F",
+     "m": {
+      "a": "rise",
+      "d": 610
+     }
+    },
+    {
+     "t": "text",
+     "id": "b10",
+     "x": 1090,
+     "y": 454,
+     "w": 690,
+     "h": 34,
+     "text": "Nguồn lực tài chính để mở rộng quy mô",
+     "s": "small",
+     "c": "#4C5A51",
+     "m": {
+      "a": "rise",
+      "d": 640
+     }
+    },
+    {
+     "t": "line",
+     "id": "l11",
+     "x1": 1040,
+     "y1": 508,
+     "x2": 1780,
+     "y2": 508,
+     "c": "#D3C7AD",
+     "w": 2,
+     "m": {
+      "a": "draw",
+      "d": 640
+     }
+    },
+    {
+     "t": "text",
+     "id": "n11",
+     "x": 1040,
+     "y": 524,
+     "w": 46,
+     "h": 40,
+     "text": "2",
+     "s": "num",
+     "size": 32,
+     "c": "#93520F",
+     "m": {
+      "a": "fade",
+      "d": 680
+     }
+    },
+    {
+     "t": "text",
+     "id": "a11",
+     "x": 1090,
+     "y": 524,
+     "w": 690,
+     "h": 36,
+     "text": "Thêm kênh điểm bán",
+     "s": "label",
+     "c": "#14271F",
+     "m": {
+      "a": "rise",
+      "d": 700
+     }
+    },
+    {
+     "t": "text",
+     "id": "b11",
+     "x": 1090,
+     "y": 562,
+     "w": 690,
+     "h": 34,
+     "text": "Mô hình kiosk trong hệ thống WinMart+",
+     "s": "small",
+     "c": "#4C5A51",
+     "m": {
+      "a": "rise",
+      "d": 730
+     }
+    },
+    {
+     "t": "line",
+     "id": "l12",
+     "x1": 1040,
+     "y1": 616,
+     "x2": 1780,
+     "y2": 616,
+     "c": "#D3C7AD",
+     "w": 2,
+     "m": {
+      "a": "draw",
+      "d": 730
+     }
+    },
+    {
+     "t": "text",
+     "id": "n12",
+     "x": 1040,
+     "y": 632,
+     "w": 46,
+     "h": 40,
+     "text": "3",
+     "s": "num",
+     "size": 32,
+     "c": "#93520F",
+     "m": {
+      "a": "fade",
+      "d": 770
+     }
+    },
+    {
+     "t": "text",
+     "id": "a12",
+     "x": 1090,
+     "y": 632,
+     "w": 690,
+     "h": 36,
+     "text": "Tăng độ phủ thương hiệu",
+     "s": "label",
+     "c": "#14271F",
+     "m": {
+      "a": "rise",
+      "d": 790
+     }
+    },
+    {
+     "t": "text",
+     "id": "b12",
+     "x": 1090,
+     "y": 670,
+     "w": 690,
+     "h": 34,
+     "text": "Tiếp cận khách hàng tại nhiều địa bàn hơn",
+     "s": "small",
+     "c": "#4C5A51",
+     "m": {
+      "a": "rise",
+      "d": 820
+     }
+    },
+    {
+     "t": "line",
+     "id": "l13",
+     "x1": 1040,
+     "y1": 724,
+     "x2": 1780,
+     "y2": 724,
+     "c": "#D3C7AD",
+     "w": 2,
+     "m": {
+      "a": "draw",
+      "d": 820
+     }
+    },
+    {
+     "t": "text",
+     "id": "n13",
+     "x": 1040,
+     "y": 740,
+     "w": 46,
+     "h": 40,
+     "text": "4",
+     "s": "num",
+     "size": 32,
+     "c": "#93520F",
+     "m": {
+      "a": "fade",
+      "d": 860
+     }
+    },
+    {
+     "t": "text",
+     "id": "a13",
+     "x": 1090,
+     "y": 740,
+     "w": 690,
+     "h": 36,
+     "text": "Nâng cấp năng lực",
+     "s": "label",
+     "c": "#14271F",
+     "m": {
+      "a": "rise",
+      "d": 880
+     }
+    },
+    {
+     "t": "text",
+     "id": "b13",
+     "x": 1090,
+     "y": 778,
+     "w": 690,
+     "h": 34,
+     "text": "Quản trị, chuỗi cung ứng, công nghệ và vận hành",
+     "s": "small",
+     "c": "#4C5A51",
+     "m": {
+      "a": "rise",
+      "d": 910
+     }
+    },
+    {
+     "t": "line",
+     "id": "l14",
+     "x1": 1040,
+     "y1": 832,
+     "x2": 1780,
+     "y2": 832,
+     "c": "#D3C7AD",
+     "w": 2,
+     "m": {
+      "a": "draw",
+      "d": 910
+     }
+    },
+    {
+     "t": "text",
+     "id": "n14",
+     "x": 1040,
+     "y": 848,
+     "w": 46,
+     "h": 40,
+     "text": "5",
+     "s": "num",
+     "size": 32,
+     "c": "#93520F",
+     "m": {
+      "a": "fade",
+      "d": 950
+     }
+    },
+    {
+     "t": "text",
+     "id": "a14",
+     "x": 1090,
+     "y": 848,
+     "w": 690,
+     "h": 36,
+     "text": "Tăng tốc phát triển",
+     "s": "label",
+     "c": "#14271F",
+     "m": {
+      "a": "rise",
+      "d": 970
+     }
+    },
+    {
+     "t": "text",
+     "id": "b14",
+     "x": 1090,
+     "y": 886,
+     "w": 690,
+     "h": 34,
+     "text": "Không chỉ dựa vào việc tự mở cửa hàng độc lập",
+     "s": "small",
+     "c": "#4C5A51",
+     "m": {
+      "a": "rise",
+      "d": 1000
+     }
+    }
+   ],
+   "deco": [],
+   "notes": "Đây là thương vụ có động cơ chiến lược hai chiều. Masan tìm thương hiệu F&B để hoàn thiện hệ sinh thái tiêu dùng – bán lẻ; Phúc Long có cơ hội tiếp cận vốn, mạng lưới và năng lực mở rộng. Giá trị kỳ vọng không chỉ nằm ở lợi nhuận riêng của Phúc Long mà ở khả năng cộng hưởng với WinCommerce và các nền tảng tiêu dùng của Masan."
+  },
+  {
+   "id": "stakes",
+   "section": "02 · Quá trình thực hiện",
+   "scene": "dusk",
+   "dark": true,
+   "transition": "fade",
+   "els": [
+    {
+     "t": "text",
+     "id": "eyebrow",
+     "x": 140,
+     "y": 112,
+     "w": 1640,
+     "h": 30,
+     "text": "02 · Quá trình thực hiện",
+     "s": "eyebrow",
+     "c": "#E3AC5C",
+     "m": {
+      "a": "fade",
+      "d": 0
+     }
+    },
+    {
+     "t": "text",
+     "id": "title",
+     "x": 140,
+     "y": 152,
+     "w": 1640,
+     "h": 170,
+     "text": "Ba bước nâng sở hữu trong 15 tháng",
+     "s": "title",
+     "c": "#F4EEE2",
+     "role": "title",
+     "m": {
+      "a": "words",
+      "d": 80
+     }
+    },
+    {
+     "t": "chart",
+     "id": "chart",
+     "x": 140,
+     "y": 320,
+     "w": 1040,
+     "h": 610,
+     "kind": "bar",
+     "cats": [
+      "24/05/2021",
+      "01/2022",
+      "08/2022"
+     ],
+     "vals": [
+      20,
+      51,
+      85
+     ],
+     "labels": [
+      "20%",
+      "51%",
+      "85%"
+     ],
+     "colors": [
+      "#5E9C7C",
+      "#9DCCB1",
+      "#E3AC5C"
+     ],
+     "max": 100,
+     "dark": true,
+     "morph": "bars",
+     "valueSize": 64,
+     "alt": "Biểu đồ cột tỷ lệ sở hữu của Masan tại Phúc Long: 20% (24/05/2021), 51% (01/2022), 85% (08/2022)",
+     "m": {
+      "a": "grow",
+      "d": 300
+     }
+    },
+    {
+     "t": "line",
+     "id": "al0",
+     "x1": 1260,
+     "y1": 350,
+     "x2": 1780,
+     "y2": 350,
+     "c": "#2E4A3D",
+     "w": 2,
+     "m": {
+      "a": "draw",
+      "d": 700
+     }
+    },
+    {
+     "t": "text",
+     "id": "ak0",
+     "x": 1260,
+     "y": 372,
+     "w": 520,
+     "h": 30,
+     "text": "Đợt 1 · 24/05/2021",
+     "s": "eyebrow",
+     "c": "#9DCCB1",
+     "m": {
+      "a": "fade",
+      "d": 740
+     }
+    },
+    {
+     "t": "text",
+     "id": "ah0",
+     "x": 1260,
+     "y": 412,
+     "w": 520,
+     "h": 44,
+     "text": "Mua 20%",
+     "s": "h3",
+     "c": "#F4EEE2",
+     "m": {
+      "a": "rise",
+      "d": 780
+     }
+    },
+    {
+     "t": "text",
+     "id": "as0",
+     "x": 1260,
+     "y": 462,
+     "w": 520,
+     "h": 70,
+     "text": "15 triệu USD (345,6 tỷ đồng); ký hợp tác phát triển kiosk",
+     "s": "small",
+     "c": "#B5C7BC",
+     "m": {
+      "a": "rise",
+      "d": 820
+     }
+    },
+    {
+     "t": "line",
+     "id": "al1",
+     "x1": 1260,
+     "y1": 546,
+     "x2": 1780,
+     "y2": 546,
+     "c": "#2E4A3D",
+     "w": 2,
+     "m": {
+      "a": "draw",
+      "d": 920
+     }
+    },
+    {
+     "t": "text",
+     "id": "ak1",
+     "x": 1260,
+     "y": 568,
+     "w": 520,
+     "h": 30,
+     "text": "Đợt 2 · 01/2022",
+     "s": "eyebrow",
+     "c": "#9DCCB1",
+     "m": {
+      "a": "fade",
+      "d": 960
+     }
+    },
+    {
+     "t": "text",
+     "id": "ah1",
+     "x": 1260,
+     "y": 608,
+     "w": 520,
+     "h": 44,
+     "text": "Thêm 31%, lên 51%",
+     "s": "h3",
+     "c": "#F4EEE2",
+     "m": {
+      "a": "rise",
+      "d": 1000
+     }
+    },
+    {
+     "t": "text",
+     "id": "as1",
+     "x": 1260,
+     "y": 658,
+     "w": 520,
+     "h": 70,
+     "text": "110 triệu USD (~2.490 tỷ đồng); Phúc Long thành công ty con",
+     "s": "small",
+     "c": "#B5C7BC",
+     "m": {
+      "a": "rise",
+      "d": 1040
+     }
+    },
+    {
+     "t": "line",
+     "id": "al2",
+     "x1": 1260,
+     "y1": 742,
+     "x2": 1780,
+     "y2": 742,
+     "c": "#2E4A3D",
+     "w": 2,
+     "m": {
+      "a": "draw",
+      "d": 1140
+     }
+    },
+    {
+     "t": "text",
+     "id": "ak2",
+     "x": 1260,
+     "y": 764,
+     "w": 520,
+     "h": 30,
+     "text": "Đợt 3 · 08/2022",
+     "s": "eyebrow",
+     "c": "#E3AC5C",
+     "m": {
+      "a": "fade",
+      "d": 1180
+     }
+    },
+    {
+     "t": "text",
+     "id": "ah2",
+     "x": 1260,
+     "y": 804,
+     "w": 520,
+     "h": 44,
+     "text": "Thêm 34%, lên 85%",
+     "s": "h3",
+     "c": "#F4EEE2",
+     "m": {
+      "a": "rise",
+      "d": 1220
+     }
+    },
+    {
+     "t": "text",
+     "id": "as2",
+     "x": 1260,
+     "y": 854,
+     "w": 520,
+     "h": 70,
+     "text": "3.617,7 tỷ đồng; 15% còn lại thuộc cổ đông khác",
+     "s": "small",
+     "c": "#B5C7BC",
+     "m": {
+      "a": "rise",
+      "d": 1260
+     }
+    }
+   ],
+   "deco": [
+    {
+     "k": "contour",
+     "cx": 1700,
+     "cy": 1080,
+     "rx": 520,
+     "ry": 300,
+     "n": 7,
+     "c": "#9DCCB1",
+     "a": 0.07,
+     "rot": 6
+    }
+   ],
+   "notes": "Masan mua cổ phần Phúc Long Heritage thông qua công ty thành viên The Sherpa Company Limited. Đợt 1, ngày 24/05/2021: mua 20% với 15 triệu USD, đồng thời VinCommerce ký hợp tác phát triển Phúc Long Kiosk. Đợt 2, tháng 1/2022: thêm 31% với 110 triệu USD, sở hữu lên 51%. Đợt 3, tháng 8/2022: thêm 10.837.500 cổ phiếu (34%) với 3.617,7 tỷ đồng, nâng sở hữu lên 85%."
+  },
+  {
+   "id": "valuation",
+   "section": "02 · Quá trình thực hiện",
+   "scene": "paper2",
+   "dark": false,
+   "transition": "fade",
+   "deco": [],
+   "els": [
+    {
+     "t": "text",
+     "id": "eyebrow",
+     "x": 140,
+     "y": 112,
+     "w": 1640,
+     "h": 30,
+     "text": "02 · Giá trị giao dịch",
+     "s": "eyebrow",
+     "c": "#93520F",
+     "m": {
+      "a": "fade",
+      "d": 0
+     }
+    },
+    {
+     "t": "text",
+     "id": "title",
+     "x": 140,
+     "y": 152,
+     "w": 1640,
+     "h": 170,
+     "text": "Mỗi bước mua, Phúc Long được định giá cao hơn",
+     "s": "title",
+     "c": "#14271F",
+     "role": "title",
+     "m": {
+      "a": "words",
+      "d": 80
+     }
+    },
+    {
+     "t": "text",
+     "id": "ck",
+     "x": 140,
+     "y": 300,
+     "w": 900,
+     "h": 30,
+     "text": "Định giá ngầm định · triệu USD",
+     "s": "eyebrow",
+     "c": "#4C5A51",
+     "m": {
+      "a": "fade",
+      "d": 200
+     }
+    },
+    {
+     "t": "chart",
+     "id": "chart",
+     "x": 140,
+     "y": 340,
+     "w": 980,
+     "h": 590,
+     "kind": "bar",
+     "cats": [
+      "Đợt 1 · 05/2021",
+      "Đợt 2 · 01/2022",
+      "Đợt 3 · 08/2022"
+     ],
+     "vals": [
+      75,
+      355,
+      455
+     ],
+     "labels": [
+      "75",
+      "355",
+      "455"
+     ],
+     "colors": [
+      "#5E9C7C",
+      "#2B6A4E",
+      "#93520F"
+     ],
+     "max": 500,
+     "dark": false,
+     "morph": "bars",
+     "valueSize": 64,
+     "alt": "Biểu đồ cột định giá ngầm định của Phúc Long: 75, 355 và 455 triệu USD qua ba đợt mua",
+     "m": {
+      "a": "grow",
+      "d": 300
+     }
+    },
+    {
+     "t": "line",
+     "id": "s1",
+     "x1": 1220,
+     "y1": 360,
+     "x2": 1780,
+     "y2": 360,
+     "c": "#14271F",
+     "w": 2,
+     "m": {
+      "a": "draw",
+      "d": 700
+     }
+    },
+    {
+     "t": "text",
+     "id": "n1",
+     "x": 1220,
+     "y": 384,
+     "w": 560,
+     "h": 140,
+     "text": "×6",
+     "s": "num",
+     "size": 120,
+     "c": "#14271F",
+     "m": {
+      "a": "rise",
+      "d": 750
+     }
+    },
+    {
+     "t": "text",
+     "id": "t1",
+     "x": 1220,
+     "y": 532,
+     "w": 560,
+     "h": 70,
+     "text": "định giá tăng khoảng 6 lần từ đợt 1 đến đợt 3",
+     "s": "small",
+     "c": "#4C5A51",
+     "m": {
+      "a": "fade",
+      "d": 850
+     }
+    },
+    {
+     "t": "line",
+     "id": "s2",
+     "x1": 1220,
+     "y1": 640,
+     "x2": 1780,
+     "y2": 640,
+     "c": "#14271F",
+     "w": 2,
+     "m": {
+      "a": "draw",
+      "d": 900
+     }
+    },
+    {
+     "t": "text",
+     "id": "n2",
+     "x": 1220,
+     "y": 664,
+     "w": 560,
+     "h": 140,
+     "text": "279,6",
+     "s": "num",
+     "size": 120,
+     "c": "#93520F",
+     "m": {
+      "a": "count",
+      "d": 950
+     }
+    },
+    {
+     "t": "text",
+     "id": "t2",
+     "x": 1220,
+     "y": 812,
+     "w": 560,
+     "h": 70,
+     "text": "triệu USD tổng giải ngân qua 3 đợt (hơn 6.450 tỷ đồng)",
+     "s": "small",
+     "c": "#4C5A51",
+     "m": {
+      "a": "fade",
+      "d": 1050
+     }
+    },
+    {
+     "t": "text",
+     "id": "src",
+     "x": 140,
+     "y": 966,
+     "w": 1640,
+     "h": 60,
+     "text": "Định giá ngầm định = giá trị giao dịch ÷ tỷ lệ cổ phần mua: 15 ÷ 20% = 75; 110 ÷ 31% ≈ 355; 3.617,7 tỷ đồng ÷ 34% ≈ 455 triệu USD.",
+     "s": "caption",
+     "c": "#4C5A51",
+     "m": {
+      "a": "fade",
+      "d": 1100
+     }
+    }
+   ],
+   "notes": "Chia giá trị mỗi đợt cho tỷ lệ cổ phần mua, ta có định giá ngầm định: 75 triệu USD ở đợt 1, khoảng 355 triệu USD ở đợt 2 và gần 455 triệu USD ở đợt 3 — gấp khoảng 6 lần. Masan giải ngân tổng cộng khoảng 279,6 triệu USD. Mức định giá cao là cái giá để sở hữu ngay vị thế dẫn đầu và tạo áp lực lên tỷ suất hoàn vốn (phần 4). (Ba cột của slide trước biến thành ba cột định giá.)"
+  },
+  {
+   "id": "stages",
+   "section": "02 · Quá trình thực hiện",
+   "scene": "paper",
+   "dark": false,
+   "transition": "fade",
+   "els": [
+    {
+     "t": "text",
+     "id": "eyebrow",
+     "x": 140,
+     "y": 112,
+     "w": 1640,
+     "h": 30,
+     "text": "02 · Ý nghĩa từng bước",
+     "s": "eyebrow",
+     "c": "#93520F",
+     "m": {
+      "a": "fade",
+      "d": 0
+     }
+    },
+    {
+     "t": "text",
+     "id": "title",
+     "x": 140,
+     "y": 152,
+     "w": 1640,
+     "h": 170,
+     "text": "Thử nghiệm, kiểm soát, rồi củng cố",
+     "s": "title",
+     "c": "#14271F",
+     "role": "title",
+     "m": {
+      "a": "words",
+      "d": 80
+     }
+    },
+    {
+     "t": "text",
+     "id": "ck",
+     "x": 140,
+     "y": 300,
+     "w": 600,
+     "h": 30,
+     "text": "Cấu trúc giao dịch",
+     "s": "eyebrow",
+     "c": "#4C5A51",
+     "m": {
+      "a": "fade",
+      "d": 200
+     }
+    },
+    {
+     "t": "box",
+     "id": "c1",
+     "x": 140,
+     "y": 344,
+     "w": 240,
+     "h": 60,
+     "text": "Masan Group",
+     "s": "label",
+     "fill": "#F4EEE2",
+     "alpha": 0,
+     "line": {
+      "c": "#14271F",
+      "w": 2
+     },
+     "r": 30,
+     "c": "#14271F",
+     "align": "center",
+     "m": {
+      "a": "fade",
+      "d": 250
+     }
+    },
+    {
+     "t": "line",
+     "id": "a1",
+     "x1": 392,
+     "y1": 374,
+     "x2": 452,
+     "y2": 374,
+     "c": "#93520F",
+     "w": 3,
+     "arrow": true,
+     "m": {
+      "a": "draw",
+      "d": 330
+     }
+    },
+    {
+     "t": "box",
+     "id": "c2",
+     "x": 464,
+     "y": 344,
+     "w": 440,
+     "h": 60,
+     "text": "The Sherpa Company Limited",
+     "s": "label",
+     "fill": "#F4EEE2",
+     "alpha": 0,
+     "line": {
+      "c": "#14271F",
+      "w": 2
+     },
+     "r": 30,
+     "c": "#14271F",
+     "align": "center",
+     "m": {
+      "a": "fade",
+      "d": 380
+     }
+    },
+    {
+     "t": "line",
+     "id": "a2",
+     "x1": 916,
+     "y1": 374,
+     "x2": 976,
+     "y2": 374,
+     "c": "#93520F",
+     "w": 3,
+     "arrow": true,
+     "m": {
+      "a": "draw",
+      "d": 460
+     }
+    },
+    {
+     "t": "box",
+     "id": "c3",
+     "x": 988,
+     "y": 344,
+     "w": 380,
+     "h": 60,
+     "text": "CTCP Phúc Long Heritage",
+     "s": "label",
+     "fill": "#12291F",
+     "r": 30,
+     "c": "#F4EEE2",
+     "align": "center",
+     "m": {
+      "a": "fade",
+      "d": 510
+     }
+    },
+    {
+     "t": "text",
+     "id": "note",
+     "x": 140,
+     "y": 426,
+     "w": 1640,
+     "h": 34,
+     "text": "12/2021: khoản đầu tư 20% chuyển sang Draco Investment Corporation do tái cấu trúc nội bộ; tỷ lệ lợi ích không đổi.",
+     "s": "small",
+     "c": "#4C5A51",
+     "m": {
+      "a": "fade",
+      "d": 560
+     }
+    },
+    {
+     "t": "rect",
+     "id": "p0",
+     "x": 140,
+     "y": 640,
+     "w": 526,
+     "h": 320,
+     "fill": "#EAE2CF",
+     "r": 18,
+     "m": {
+      "a": "grow",
+      "d": 650
+     }
+    },
+    {
+     "t": "text",
+     "id": "pk0",
+     "x": 180,
+     "y": 676,
+     "w": 450,
+     "h": 30,
+     "text": "05/2021 · 20%",
+     "s": "eyebrow",
+     "c": "#93520F",
+     "m": {
+      "a": "fade",
+      "d": 950
+     }
+    },
+    {
+     "t": "text",
+     "id": "ph0",
+     "x": 180,
+     "y": 716,
+     "w": 450,
+     "h": 56,
+     "text": "Thử nghiệm",
+     "s": "h2",
+     "c": "#14271F",
+     "m": {
+      "a": "rise",
+      "d": 990
+     }
+    },
+    {
+     "t": "text",
+     "id": "pb0",
+     "x": 180,
+     "y": 784,
+     "w": 450,
+     "h": 150,
+     "text": "Cổ đông thiểu số: tạo nền tảng hợp tác, thử nghiệm kết hợp Phúc Long với WinCommerce. Chưa nắm quyền kiểm soát.",
+     "s": "small",
+     "c": "#4C5A51",
+     "m": {
+      "a": "rise",
+      "d": 1030
+     }
+    },
+    {
+     "t": "rect",
+     "id": "p1",
+     "x": 697,
+     "y": 560,
+     "w": 526,
+     "h": 400,
+     "fill": "#DDD1B7",
+     "r": 18,
+     "m": {
+      "a": "grow",
+      "d": 870
+     }
+    },
+    {
+     "t": "text",
+     "id": "pk1",
+     "x": 737,
+     "y": 596,
+     "w": 450,
+     "h": 30,
+     "text": "01/2022 · 51%",
+     "s": "eyebrow",
+     "c": "#93520F",
+     "m": {
+      "a": "fade",
+      "d": 1170
+     }
+    },
+    {
+     "t": "text",
+     "id": "ph1",
+     "x": 737,
+     "y": 636,
+     "w": 450,
+     "h": 56,
+     "text": "Kiểm soát",
+     "s": "h2",
+     "c": "#14271F",
+     "m": {
+      "a": "rise",
+      "d": 1210
+     }
+    },
+    {
+     "t": "text",
+     "id": "pb1",
+     "x": 737,
+     "y": 704,
+     "w": 450,
+     "h": 150,
+     "text": "Chuyển sang đa số. Phúc Long thành công ty con, kết quả kinh doanh hợp nhất vào BCTC của Masan.",
+     "s": "small",
+     "c": "#4C5A51",
+     "m": {
+      "a": "rise",
+      "d": 1250
+     }
+    },
+    {
+     "t": "rect",
+     "id": "p2",
+     "x": 1254,
+     "y": 480,
+     "w": 526,
+     "h": 480,
+     "fill": "#12291F",
+     "r": 18,
+     "m": {
+      "a": "grow",
+      "d": 1090
+     }
+    },
+    {
+     "t": "text",
+     "id": "pk2",
+     "x": 1294,
+     "y": 516,
+     "w": 450,
+     "h": 30,
+     "text": "08/2022 · 85%",
+     "s": "eyebrow",
+     "c": "#E3AC5C",
+     "m": {
+      "a": "fade",
+      "d": 1390
+     }
+    },
+    {
+     "t": "text",
+     "id": "ph2",
+     "x": 1294,
+     "y": 556,
+     "w": 450,
+     "h": 56,
+     "text": "Củng cố",
+     "s": "h2",
+     "c": "#F4EEE2",
+     "m": {
+      "a": "rise",
+      "d": 1430
+     }
+    },
+    {
+     "t": "text",
+     "id": "pb2",
+     "x": 1294,
+     "y": 624,
+     "w": 450,
+     "h": 150,
+     "text": "Tăng lợi ích kinh tế, giảm phần của cổ đông không kiểm soát; đổi lại là cam kết vốn lớn hơn.",
+     "s": "small",
+     "c": "#B5C7BC",
+     "m": {
+      "a": "rise",
+      "d": 1470
+     }
+    }
+   ],
+   "deco": [],
+   "notes": "Ba bậc thang thể hiện mức cam kết tăng dần. Bước 1 là đầu tư thiểu số để thử nghiệm hợp tác. Bước 2, mốc 51%, đánh dấu quyền kiểm soát: Phúc Long được hợp nhất vào báo cáo tài chính của Masan. Bước 3 nâng lên 85% để tăng lợi ích kinh tế, đồng nghĩa cam kết vốn lớn hơn. Lưu ý: ngày mua 20% được thuyết minh trong BCTC hợp nhất 2021 là 29/05/2021; tháng 12/2021 khoản đầu tư này chuyển sang Draco Investment Corporation theo tái cấu trúc nội bộ."
+  },
+  {
+   "id": "synergy",
+   "section": "03 · Thúc đẩy và cản trở",
+   "scene": "paper",
+   "dark": false,
+   "transition": "fade",
+   "els": [
+    {
+     "t": "text",
+     "id": "eyebrow",
+     "x": 140,
+     "y": 112,
+     "w": 1640,
+     "h": 30,
+     "text": "03 · Yếu tố thúc đẩy và cản trở",
+     "s": "eyebrow",
+     "c": "#93520F",
+     "m": {
+      "a": "fade",
+      "d": 0
+     }
+    },
+    {
+     "t": "text",
+     "id": "title",
+     "x": 140,
+     "y": 152,
+     "w": 1640,
+     "h": 170,
+     "text": "Bảy nguồn giá trị kỳ vọng, nguồn nào cũng có mặt trái",
+     "s": "title",
+     "c": "#14271F",
+     "role": "title",
+     "m": {
+      "a": "words",
+      "d": 80
+     }
+    },
+    {
+     "t": "text",
+     "id": "hk1",
+     "x": 140,
+     "y": 352,
+     "w": 600,
+     "h": 30,
+     "text": "Thúc đẩy",
+     "s": "eyebrow",
+     "c": "#2B6A4E",
+     "align": "right",
+     "m": {
+      "a": "fade",
+      "d": 250
+     }
+    },
+    {
+     "t": "text",
+     "id": "hk2",
+     "x": 790,
+     "y": 352,
+     "w": 340,
+     "h": 30,
+     "text": "Nguồn giá trị",
+     "s": "eyebrow",
+     "c": "#4C5A51",
+     "align": "center",
+     "m": {
+      "a": "fade",
+      "d": 250
+     }
+    },
+    {
+     "t": "text",
+     "id": "hk3",
+     "x": 1180,
+     "y": 352,
+     "w": 600,
+     "h": 30,
+     "text": "Cản trở",
+     "s": "eyebrow",
+     "c": "#93520F",
+     "m": {
+      "a": "fade",
+      "d": 250
+     }
+    },
+    {
+     "t": "text",
+     "id": "g0",
+     "x": 140,
+     "y": 412,
+     "w": 620,
+     "h": 38,
+     "text": "Bán chéo; độ phủ 3.000+ điểm; hàng đóng gói",
+     "s": "body",
+     "size": 26,
+     "c": "#2B6A4E",
+     "align": "right",
+     "m": {
+      "a": "rise",
+      "d": 430
+     }
+    },
+    {
+     "t": "box",
+     "id": "n0",
+     "x": 790,
+     "y": 400,
+     "w": 340,
+     "h": 60,
+     "text": "1 · Doanh thu tăng thêm",
+     "s": "label",
+     "size": 24,
+     "fill": "#12291F",
+     "r": 30,
+     "c": "#F4EEE2",
+     "align": "center",
+     "m": {
+      "a": "scale",
+      "d": 350
+     }
+    },
+    {
+     "t": "text",
+     "id": "s0",
+     "x": 1160,
+     "y": 412,
+     "w": 620,
+     "h": 38,
+     "text": "Xung đột trải nghiệm; ăn mòn doanh thu",
+     "s": "body",
+     "size": 26,
+     "c": "#93520F",
+     "m": {
+      "a": "rise",
+      "d": 470
+     }
+    },
+    {
+     "t": "text",
+     "id": "g1",
+     "x": 140,
+     "y": 490,
+     "w": 620,
+     "h": 38,
+     "text": "Chia sẻ mặt bằng; sức mua nguyên liệu lớn",
+     "s": "body",
+     "size": 26,
+     "c": "#2B6A4E",
+     "align": "right",
+     "m": {
+      "a": "rise",
+      "d": 530
+     }
+    },
+    {
+     "t": "box",
+     "id": "n1",
+     "x": 790,
+     "y": 478,
+     "w": 340,
+     "h": 60,
+     "text": "2 · Chi phí hoạt động",
+     "s": "label",
+     "size": 24,
+     "fill": "#12291F",
+     "r": 30,
+     "c": "#F4EEE2",
+     "align": "center",
+     "m": {
+      "a": "scale",
+      "d": 450
+     }
+    },
+    {
+     "t": "text",
+     "id": "s1",
+     "x": 1160,
+     "y": 490,
+     "w": 620,
+     "h": 38,
+     "text": "Vận hành F&B phức tạp, chi phí quản lý",
+     "s": "body",
+     "size": 26,
+     "c": "#93520F",
+     "m": {
+      "a": "rise",
+      "d": 570
+     }
+    },
+    {
+     "t": "text",
+     "id": "g2",
+     "x": 140,
+     "y": 568,
+     "w": 620,
+     "h": 38,
+     "text": "Lãi vay M&A được khấu trừ thuế TNDN",
+     "s": "body",
+     "size": 26,
+     "c": "#4C5A51",
+     "align": "right",
+     "m": {
+      "a": "rise",
+      "d": 630
+     }
+    },
+    {
+     "t": "box",
+     "id": "n2",
+     "x": 790,
+     "y": 556,
+     "w": 340,
+     "h": 60,
+     "text": "3 · Lợi ích thuế",
+     "s": "label",
+     "size": 24,
+     "fill": "#DDD1B7",
+     "r": 30,
+     "c": "#14271F",
+     "align": "center",
+     "m": {
+      "a": "scale",
+      "d": 550
+     }
+    },
+    {
+     "t": "text",
+     "id": "s2",
+     "x": 1160,
+     "y": 568,
+     "w": 620,
+     "h": 38,
+     "text": "Không trọng yếu: cả hai đều có lãi",
+     "s": "body",
+     "size": 26,
+     "c": "#4C5A51",
+     "m": {
+      "a": "rise",
+      "d": 670
+     }
+    },
+    {
+     "t": "text",
+     "id": "g3",
+     "x": 140,
+     "y": 646,
+     "w": 620,
+     "h": 38,
+     "text": "Tăng doanh thu/m²; dùng thương hiệu sẵn có",
+     "s": "body",
+     "size": 26,
+     "c": "#2B6A4E",
+     "align": "right",
+     "m": {
+      "a": "rise",
+      "d": 730
+     }
+    },
+    {
+     "t": "box",
+     "id": "n3",
+     "x": 790,
+     "y": 634,
+     "w": 340,
+     "h": 60,
+     "text": "4 · Hiệu quả tài sản",
+     "s": "label",
+     "size": 24,
+     "fill": "#12291F",
+     "r": 30,
+     "c": "#F4EEE2",
+     "align": "center",
+     "m": {
+      "a": "scale",
+      "d": 650
+     }
+    },
+    {
+     "t": "text",
+     "id": "s3",
+     "x": 1160,
+     "y": 646,
+     "w": 620,
+     "h": 38,
+     "text": "Kiosk không hòa vốn phải đóng cửa",
+     "s": "body",
+     "size": 26,
+     "c": "#93520F",
+     "m": {
+      "a": "rise",
+      "d": 770
+     }
+    },
+    {
+     "t": "text",
+     "id": "g4",
+     "x": 140,
+     "y": 724,
+     "w": 620,
+     "h": 38,
+     "text": "Chiếm phân khúc tầm trung – cận cao cấp",
+     "s": "body",
+     "size": 26,
+     "c": "#2B6A4E",
+     "align": "right",
+     "m": {
+      "a": "rise",
+      "d": 830
+     }
+    },
+    {
+     "t": "box",
+     "id": "n4",
+     "x": 790,
+     "y": 712,
+     "w": 340,
+     "h": 60,
+     "text": "5 · Áp lực cạnh tranh",
+     "s": "label",
+     "size": 24,
+     "fill": "#12291F",
+     "r": 30,
+     "c": "#F4EEE2",
+     "align": "center",
+     "m": {
+      "a": "scale",
+      "d": 750
+     }
+    },
+    {
+     "t": "text",
+     "id": "s4",
+     "x": 1160,
+     "y": 724,
+     "w": 620,
+     "h": 38,
+     "text": "Rào cản gia nhập ngành F&B thấp",
+     "s": "body",
+     "size": 26,
+     "c": "#93520F",
+     "m": {
+      "a": "rise",
+      "d": 870
+     }
+    },
+    {
+     "t": "text",
+     "id": "g5",
+     "x": 140,
+     "y": 802,
+     "w": 620,
+     "h": 38,
+     "text": "Hệ sinh thái; khép kín từ đồi chè đến ly",
+     "s": "body",
+     "size": 26,
+     "c": "#2B6A4E",
+     "align": "right",
+     "m": {
+      "a": "rise",
+      "d": 930
+     }
+    },
+    {
+     "t": "box",
+     "id": "n5",
+     "x": 790,
+     "y": 790,
+     "w": 340,
+     "h": 60,
+     "text": "6 · Chuỗi giá trị",
+     "s": "label",
+     "size": 24,
+     "fill": "#12291F",
+     "r": 30,
+     "c": "#F4EEE2",
+     "align": "center",
+     "m": {
+      "a": "scale",
+      "d": 850
+     }
+    },
+    {
+     "t": "text",
+     "id": "s5",
+     "x": 1160,
+     "y": 802,
+     "w": 620,
+     "h": 38,
+     "text": "Phân tán nguồn lực quản trị",
+     "s": "body",
+     "size": 26,
+     "c": "#93520F",
+     "m": {
+      "a": "rise",
+      "d": 970
+     }
+    },
+    {
+     "t": "text",
+     "id": "g6",
+     "x": 140,
+     "y": 880,
+     "w": 620,
+     "h": 38,
+     "text": "Mua thời gian, thị phần, biên gộp cao",
+     "s": "body",
+     "size": 26,
+     "c": "#2B6A4E",
+     "align": "right",
+     "m": {
+      "a": "rise",
+      "d": 1030
+     }
+    },
+    {
+     "t": "box",
+     "id": "n6",
+     "x": 790,
+     "y": 868,
+     "w": 340,
+     "h": 60,
+     "text": "7 · Chi phí gia nhập",
+     "s": "label",
+     "size": 24,
+     "fill": "#12291F",
+     "r": 30,
+     "c": "#F4EEE2",
+     "align": "center",
+     "m": {
+      "a": "scale",
+      "d": 950
+     }
+    },
+    {
+     "t": "text",
+     "id": "s6",
+     "x": 1160,
+     "y": 880,
+     "w": 620,
+     "h": 38,
+     "text": "Định giá cao, áp lực lợi thế thương mại",
+     "s": "body",
+     "size": 26,
+     "c": "#93520F",
+     "m": {
+      "a": "rise",
+      "d": 1070
+     }
+    }
+   ],
+   "deco": [],
+   "notes": "Bảy nguồn giá trị theo khung lý thuyết M&A, đọc từ giữa ra hai phía: bên trái là yếu tố thúc đẩy, bên phải là yếu tố cản trở. Lợi ích thuế được làm mờ vì không phải động lực trọng yếu: cả hai doanh nghiệp đều có lãi, lợi ích chuyển lỗ không đáng kể. Biên lợi nhuận gộp ngành F&B thường 60–70%, cao hơn nhiều so với siêu thị bán lẻ — lý do Masan chấp nhận định giá khoảng 350–450 triệu USD."
+  },
+  {
+   "id": "kiosk",
+   "section": "03 · Thúc đẩy và cản trở",
+   "scene": "dusk",
+   "dark": true,
+   "transition": "fade",
+   "els": [
+    {
+     "t": "text",
+     "id": "eyebrow",
+     "x": 140,
+     "y": 112,
+     "w": 1640,
+     "h": 30,
+     "text": "03 · Doanh thu, chi phí, tài sản",
+     "s": "eyebrow",
+     "c": "#E3AC5C",
+     "m": {
+      "a": "fade",
+      "d": 0
+     }
+    },
+    {
+     "t": "text",
+     "id": "title",
+     "x": 140,
+     "y": 152,
+     "w": 1640,
+     "h": 170,
+     "text": "Kiosk trong WinMart+: cộng hưởng lớn nhất, cũng là rủi ro lớn nhất",
+     "s": "title",
+     "c": "#F4EEE2",
+     "role": "title",
+     "m": {
+      "a": "words",
+      "d": 80
+     }
+    },
+    {
+     "t": "line",
+     "id": "axis",
+     "x1": 960,
+     "y1": 372,
+     "x2": 960,
+     "y2": 950,
+     "c": "#2E4A3D",
+     "w": 2,
+     "m": {
+      "a": "draw",
+      "d": 250
+     }
+    },
+    {
+     "t": "ellipse",
+     "id": "core",
+     "x": 880,
+     "y": 585,
+     "w": 160,
+     "h": 160,
+     "fill": "#1B3A2C",
+     "line": {
+      "c": "#E3AC5C",
+      "w": 3
+     },
+     "m": {
+      "a": "scale",
+      "d": 350
+     }
+    },
+    {
+     "t": "text",
+     "id": "corev",
+     "x": 880,
+     "y": 646,
+     "w": 160,
+     "h": 40,
+     "text": "Kiosk",
+     "s": "h3",
+     "size": 30,
+     "c": "#F4EEE2",
+     "align": "center",
+     "m": {
+      "a": "fade",
+      "d": 450
+     }
+    },
+    {
+     "t": "text",
+     "id": "lk",
+     "x": 140,
+     "y": 370,
+     "w": 660,
+     "h": 30,
+     "text": "Kỳ vọng · thúc đẩy",
+     "s": "eyebrow",
+     "c": "#9DCCB1",
+     "m": {
+      "a": "fade",
+      "d": 400
+     }
+    },
+    {
+     "t": "text",
+     "id": "rk",
+     "x": 1120,
+     "y": 370,
+     "w": 660,
+     "h": 30,
+     "text": "Thực tế · cản trở",
+     "s": "eyebrow",
+     "c": "#E3AC5C",
+     "step": 1,
+     "m": {
+      "a": "fade",
+      "d": 0
+     }
+    },
+    {
+     "t": "line",
+     "id": "l00",
+     "x1": 140,
+     "y1": 420,
+     "x2": 800,
+     "y2": 420,
+     "c": "#2E4A3D",
+     "w": 2,
+     "step": 0,
+     "m": {
+      "a": "draw",
+      "d": 500
+     }
+    },
+    {
+     "t": "text",
+     "id": "a00",
+     "x": 140,
+     "y": 440,
+     "w": 660,
+     "h": 42,
+     "text": "Bán chéo hai chiều",
+     "s": "h3",
+     "size": 30,
+     "c": "#F4EEE2",
+     "step": 0,
+     "m": {
+      "a": "rise",
+      "d": 560
+     }
+    },
+    {
+     "t": "text",
+     "id": "b00",
+     "x": 140,
+     "y": 488,
+     "w": 660,
+     "h": 76,
+     "text": "Khách trẻ ghé mua đồ uống rồi mua thêm nhu yếu phẩm, và ngược lại.",
+     "s": "small",
+     "c": "#B5C7BC",
+     "step": 0,
+     "m": {
+      "a": "rise",
+      "d": 600
+     }
+    },
+    {
+     "t": "line",
+     "id": "l01",
+     "x1": 140,
+     "y1": 596,
+     "x2": 800,
+     "y2": 596,
+     "c": "#2E4A3D",
+     "w": 2,
+     "step": 0,
+     "m": {
+      "a": "draw",
+      "d": 640
+     }
+    },
+    {
+     "t": "text",
+     "id": "a01",
+     "x": 140,
+     "y": 616,
+     "w": 660,
+     "h": 42,
+     "text": "Mở rộng thần tốc",
+     "s": "h3",
+     "size": 30,
+     "c": "#F4EEE2",
+     "step": 0,
+     "m": {
+      "a": "rise",
+      "d": 700
+     }
+    },
+    {
+     "t": "text",
+     "id": "b01",
+     "x": 140,
+     "y": 664,
+     "w": 660,
+     "h": 76,
+     "text": "Tận dụng hơn 3.000 điểm bán WinCommerce, không cần mặt bằng mới.",
+     "s": "small",
+     "c": "#B5C7BC",
+     "step": 0,
+     "m": {
+      "a": "rise",
+      "d": 740
+     }
+    },
+    {
+     "t": "line",
+     "id": "l02",
+     "x1": 140,
+     "y1": 772,
+     "x2": 800,
+     "y2": 772,
+     "c": "#2E4A3D",
+     "w": 2,
+     "step": 0,
+     "m": {
+      "a": "draw",
+      "d": 780
+     }
+    },
+    {
+     "t": "text",
+     "id": "a02",
+     "x": 140,
+     "y": 792,
+     "w": 660,
+     "h": 42,
+     "text": "Chia sẻ chi phí cố định",
+     "s": "h3",
+     "size": 30,
+     "c": "#F4EEE2",
+     "step": 0,
+     "m": {
+      "a": "rise",
+      "d": 840
+     }
+    },
+    {
+     "t": "text",
+     "id": "b02",
+     "x": 140,
+     "y": 840,
+     "w": 660,
+     "h": 76,
+     "text": "Dùng chung mặt bằng, điện nước, an ninh, nhân sự quản lý.",
+     "s": "small",
+     "c": "#B5C7BC",
+     "step": 0,
+     "m": {
+      "a": "rise",
+      "d": 880
+     }
+    },
+    {
+     "t": "line",
+     "id": "l10",
+     "x1": 1120,
+     "y1": 420,
+     "x2": 1780,
+     "y2": 420,
+     "c": "#2E4A3D",
+     "w": 2,
+     "step": 1,
+     "m": {
+      "a": "draw",
+      "d": 120
+     }
+    },
+    {
+     "t": "text",
+     "id": "a10",
+     "x": 1120,
+     "y": 440,
+     "w": 660,
+     "h": 42,
+     "text": "Xung đột trải nghiệm",
+     "s": "h3",
+     "size": 30,
+     "c": "#F4EEE2",
+     "step": 1,
+     "m": {
+      "a": "rise",
+      "d": 180
+     }
+    },
+    {
+     "t": "text",
+     "id": "b10",
+     "x": 1120,
+     "y": 488,
+     "w": 660,
+     "h": 76,
+     "text": "Khách Phúc Long thích ngồi lại; WinMart+ là mua nhanh, tiện lợi.",
+     "s": "small",
+     "c": "#B5C7BC",
+     "step": 1,
+     "m": {
+      "a": "rise",
+      "d": 220
+     }
+    },
+    {
+     "t": "line",
+     "id": "l11",
+     "x1": 1120,
+     "y1": 596,
+     "x2": 1780,
+     "y2": 596,
+     "c": "#2E4A3D",
+     "w": 2,
+     "step": 1,
+     "m": {
+      "a": "draw",
+      "d": 260
+     }
+    },
+    {
+     "t": "text",
+     "id": "a11",
+     "x": 1120,
+     "y": 616,
+     "w": 660,
+     "h": 42,
+     "text": "Ăn mòn doanh thu",
+     "s": "h3",
+     "size": 30,
+     "c": "#F4EEE2",
+     "step": 1,
+     "m": {
+      "a": "rise",
+      "d": 320
+     }
+    },
+    {
+     "t": "text",
+     "id": "b11",
+     "x": 1120,
+     "y": 664,
+     "w": 660,
+     "h": 76,
+     "text": "Kiosk dày đặc kéo doanh thu khỏi cửa hàng flagship lân cận.",
+     "s": "small",
+     "c": "#B5C7BC",
+     "step": 1,
+     "m": {
+      "a": "rise",
+      "d": 360
+     }
+    },
+    {
+     "t": "line",
+     "id": "l12",
+     "x1": 1120,
+     "y1": 772,
+     "x2": 1780,
+     "y2": 772,
+     "c": "#2E4A3D",
+     "w": 2,
+     "step": 1,
+     "m": {
+      "a": "draw",
+      "d": 400
+     }
+    },
+    {
+     "t": "text",
+     "id": "a12",
+     "x": 1120,
+     "y": 792,
+     "w": 660,
+     "h": 42,
+     "text": "Vận hành hoàn toàn khác",
+     "s": "h3",
+     "size": 30,
+     "c": "#F4EEE2",
+     "step": 1,
+     "m": {
+      "a": "rise",
+      "d": 460
+     }
+    },
+    {
+     "t": "text",
+     "id": "b12",
+     "x": 1120,
+     "y": 840,
+     "w": 660,
+     "h": 76,
+     "text": "Kiểm soát pha chế, hao hụt nguyên liệu tươi, đào tạo barista.",
+     "s": "small",
+     "c": "#B5C7BC",
+     "step": 1,
+     "m": {
+      "a": "rise",
+      "d": 500
+     }
+    }
+   ],
+   "deco": [
+    {
+     "k": "contour",
+     "cx": 960,
+     "cy": 665,
+     "rx": 380,
+     "ry": 380,
+     "n": 6,
+     "c": "#E3AC5C",
+     "a": 0.06,
+     "rot": 0
+    }
+   ],
+   "notes": "Bấm một lần để hiện cột bên phải. Kiosk là nơi hội tụ nhiều nguồn cộng hưởng nhất: bán chéo, mở rộng nhanh trên quỹ hơn 3.000 điểm bán, chia sẻ chi phí cố định, tăng doanh thu trên mỗi mét vuông. Nhưng cũng mang nhiều rủi ro nhất: tệp khách và trải nghiệm không khớp, nguy cơ ăn mòn doanh thu cửa hàng flagship, và vận hành F&B khác hẳn bán lẻ hàng đóng gói. Phần 4 cho thấy rủi ro nào đã thành hiện thực."
+  },
+  {
+   "id": "valuechain",
+   "section": "03 · Thúc đẩy và cản trở",
+   "scene": "paper",
+   "dark": false,
+   "transition": "fade",
+   "els": [
+    {
+     "t": "text",
+     "id": "eyebrow",
+     "x": 140,
+     "y": 112,
+     "w": 1640,
+     "h": 30,
+     "text": "03 · Đa dạng hóa và chuỗi giá trị",
+     "s": "eyebrow",
+     "c": "#93520F",
+     "m": {
+      "a": "fade",
+      "d": 0
+     }
+    },
+    {
+     "t": "text",
+     "id": "title",
+     "x": 140,
+     "y": 152,
+     "w": 1640,
+     "h": 170,
+     "text": "Khép kín chuỗi giá trị: từ đồi chè đến ly nước",
+     "s": "title",
+     "c": "#14271F",
+     "role": "title",
+     "m": {
+      "a": "words",
+      "d": 80
+     }
+    },
+    {
+     "t": "line",
+     "id": "path",
+     "x1": 360,
+     "y1": 470,
+     "x2": 1560,
+     "y2": 470,
+     "c": "#2B6A4E",
+     "w": 3,
+     "m": {
+      "a": "draw",
+      "d": 250,
+      "dur": 1200
+     }
+    },
+    {
+     "t": "ellipse",
+     "id": "c0",
+     "x": 304,
+     "y": 414,
+     "w": 112,
+     "h": 112,
+     "fill": "#12291F",
+     "line": {
+      "c": "#F4EEE2",
+      "w": 6
+     },
+     "m": {
+      "a": "scale",
+      "d": 400
+     }
+    },
+    {
+     "t": "text",
+     "id": "cn0",
+     "x": 304,
+     "y": 444,
+     "w": 112,
+     "h": 52,
+     "text": "01",
+     "s": "num",
+     "size": 40,
+     "c": "#F4EEE2",
+     "align": "center",
+     "m": {
+      "a": "fade",
+      "d": 520
+     }
+    },
+    {
+     "t": "text",
+     "id": "ch0",
+     "x": 140,
+     "y": 560,
+     "w": 440,
+     "h": 56,
+     "text": "Vùng nguyên liệu",
+     "s": "h2",
+     "c": "#14271F",
+     "align": "center",
+     "m": {
+      "a": "rise",
+      "d": 560
+     }
+    },
+    {
+     "t": "text",
+     "id": "cs0",
+     "x": 140,
+     "y": 626,
+     "w": 440,
+     "h": 110,
+     "text": "Đồi chè của Phúc Long tại Thái Nguyên và Bảo Lộc",
+     "s": "small",
+     "c": "#4C5A51",
+     "align": "center",
+     "m": {
+      "a": "rise",
+      "d": 600
+     }
+    },
+    {
+     "t": "ellipse",
+     "id": "c1",
+     "x": 904,
+     "y": 414,
+     "w": 112,
+     "h": 112,
+     "fill": "#12291F",
+     "line": {
+      "c": "#F4EEE2",
+      "w": 6
+     },
+     "m": {
+      "a": "scale",
+      "d": 780
+     }
+    },
+    {
+     "t": "text",
+     "id": "cn1",
+     "x": 904,
+     "y": 444,
+     "w": 112,
+     "h": 52,
+     "text": "02",
+     "s": "num",
+     "size": 40,
+     "c": "#F4EEE2",
+     "align": "center",
+     "m": {
+      "a": "fade",
+      "d": 900
+     }
+    },
+    {
+     "t": "text",
+     "id": "ch1",
+     "x": 740,
+     "y": 560,
+     "w": 440,
+     "h": 56,
+     "text": "Chế biến",
+     "s": "h2",
+     "c": "#14271F",
+     "align": "center",
+     "m": {
+      "a": "rise",
+      "d": 940
+     }
+    },
+    {
+     "t": "text",
+     "id": "cs1",
+     "x": 740,
+     "y": 626,
+     "w": 440,
+     "h": 110,
+     "text": "Trà, cà phê và danh mục đồ uống mang dấu ấn riêng",
+     "s": "small",
+     "c": "#4C5A51",
+     "align": "center",
+     "m": {
+      "a": "rise",
+      "d": 980
+     }
+    },
+    {
+     "t": "ellipse",
+     "id": "c2",
+     "x": 1504,
+     "y": 414,
+     "w": 112,
+     "h": 112,
+     "fill": "#12291F",
+     "line": {
+      "c": "#F4EEE2",
+      "w": 6
+     },
+     "m": {
+      "a": "scale",
+      "d": 1160
+     }
+    },
+    {
+     "t": "text",
+     "id": "cn2",
+     "x": 1504,
+     "y": 444,
+     "w": 112,
+     "h": 52,
+     "text": "03",
+     "s": "num",
+     "size": 40,
+     "c": "#F4EEE2",
+     "align": "center",
+     "m": {
+      "a": "fade",
+      "d": 1280
+     }
+    },
+    {
+     "t": "text",
+     "id": "ch2",
+     "x": 1340,
+     "y": 560,
+     "w": 440,
+     "h": 56,
+     "text": "Phân phối",
+     "s": "h2",
+     "c": "#14271F",
+     "align": "center",
+     "m": {
+      "a": "rise",
+      "d": 1320
+     }
+    },
+    {
+     "t": "text",
+     "id": "cs2",
+     "x": 1340,
+     "y": 626,
+     "w": 440,
+     "h": 110,
+     "text": "Kênh quán (cửa hàng, kiosk) và hàng đóng gói qua Masan Consumer",
+     "s": "small",
+     "c": "#4C5A51",
+     "align": "center",
+     "m": {
+      "a": "rise",
+      "d": 1360
+     }
+    },
+    {
+     "t": "line",
+     "id": "b1",
+     "x1": 140,
+     "y1": 780,
+     "x2": 900,
+     "y2": 780,
+     "c": "#D3C7AD",
+     "w": 2,
+     "m": {
+      "a": "draw",
+      "d": 1400
+     }
+    },
+    {
+     "t": "text",
+     "id": "bk1",
+     "x": 140,
+     "y": 802,
+     "w": 760,
+     "h": 30,
+     "text": "Thúc đẩy · hoàn thiện hệ sinh thái",
+     "s": "eyebrow",
+     "c": "#2B6A4E",
+     "m": {
+      "a": "fade",
+      "d": 1450
+     }
+    },
+    {
+     "t": "text",
+     "id": "bb1",
+     "x": 140,
+     "y": 846,
+     "w": 760,
+     "h": 124,
+     "text": "Phúc Long bổ sung mảng F&B tiêu dùng tại chỗ, bên cạnh WinMart, Masan Consumer và Techcombank.",
+     "s": "body",
+     "c": "#14271F",
+     "m": {
+      "a": "rise",
+      "d": 1500
+     }
+    },
+    {
+     "t": "line",
+     "id": "b2",
+     "x1": 1020,
+     "y1": 780,
+     "x2": 1780,
+     "y2": 780,
+     "c": "#D3C7AD",
+     "w": 2,
+     "m": {
+      "a": "draw",
+      "d": 1550
+     }
+    },
+    {
+     "t": "text",
+     "id": "bk2",
+     "x": 1020,
+     "y": 802,
+     "w": 760,
+     "h": 30,
+     "text": "Cản trở · phân tán nguồn lực",
+     "s": "eyebrow",
+     "c": "#93520F",
+     "m": {
+      "a": "fade",
+      "d": 1600
+     }
+    },
+    {
+     "t": "text",
+     "id": "bb2",
+     "x": 1020,
+     "y": 846,
+     "w": 760,
+     "h": 124,
+     "text": "Quản trị cùng lúc sản xuất, bán lẻ, F&B, viễn thông và tài chính dễ làm ban lãnh đạo mất tập trung.",
+     "s": "body",
+     "c": "#14271F",
+     "m": {
+      "a": "rise",
+      "d": 1650
+     }
+    }
+   ],
+   "deco": [
+    {
+     "k": "contour",
+     "cx": 1820,
+     "cy": 60,
+     "rx": 560,
+     "ry": 300,
+     "n": 9,
+     "c": "#5E9C7C",
+     "a": 0.12,
+     "rot": -6
+    },
+    {
+     "k": "leaf",
+     "x": 140,
+     "y": 1010,
+     "s": 0.9,
+     "rot": 40,
+     "c": "#5E9C7C",
+     "a": 0.14
+    }
+   ],
+   "notes": "Masan chuyển từ công ty sản xuất hàng tiêu dùng thuần túy sang nền tảng tiêu dùng – bán lẻ tích hợp. Với Phúc Long, Masan kiểm soát từ vùng nguyên liệu chè, cà phê, qua chế biến, đến phân phối ở cả kênh quán và kênh bán lẻ. Mặt trái là rủi ro phân tán nguồn lực khi quản trị quá nhiều mô hình kinh doanh khác nhau."
+  },
+  {
+   "id": "verdict",
+   "section": "04 · Đánh giá và tổng kết",
+   "scene": "amber",
+   "dark": false,
+   "layout": "hero",
+   "transition": "fade",
+   "deco": [
+    {
+     "k": "rings",
+     "cx": 1720,
+     "cy": 540,
+     "r": 520,
+     "c": "#F4EEE2",
+     "a": 0.22
+    }
+   ],
+   "els": [
+    {
+     "t": "text",
+     "id": "eyebrow",
+     "x": 140,
+     "y": 250,
+     "w": 1200,
+     "h": 30,
+     "text": "04 · Đánh giá kết quả",
+     "s": "eyebrow",
+     "c": "#14271F",
+     "m": {
+      "a": "fade",
+      "d": 0
+     }
+    },
+    {
+     "t": "text",
+     "id": "title",
+     "x": 140,
+     "y": 300,
+     "w": 1560,
+     "h": 400,
+     "text": "Thất bại ở tích hợp cơ học, thành công ở quản trị và thương hiệu.",
+     "s": "statement",
+     "c": "#14271F",
+     "role": "title",
+     "m": {
+      "a": "words",
+      "d": 150
+     }
+    },
+    {
+     "t": "text",
+     "id": "cap",
+     "x": 140,
+     "y": 770,
+     "w": 1200,
+     "h": 44,
+     "text": "Nhận định của nhóm sau giai đoạn 2021 – 2026",
+     "s": "body",
+     "c": "#14271F",
+     "m": {
+      "a": "fade",
+      "d": 1300
+     }
+    }
+   ],
+   "notes": "Kết quả thương vụ phản ánh một quá trình M&A thực tế: thất bại ở ý tưởng tích hợp cơ học, tức kiosk trong siêu thị mini, nhưng thành công trong việc nâng tầm năng lực quản trị và khai thác giá trị thương hiệu cốt lõi. Các slide tiếp theo trình bày cả hai mặt."
+  },
+  {
+   "id": "results",
+   "section": "04 · Đánh giá và tổng kết",
+   "scene": "paper",
+   "dark": false,
+   "transition": "fade",
+   "els": [
+    {
+     "t": "text",
+     "id": "eyebrow",
+     "x": 140,
+     "y": 112,
+     "w": 1640,
+     "h": 30,
+     "text": "04 · Thành quả",
+     "s": "eyebrow",
+     "c": "#93520F",
+     "m": {
+      "a": "fade",
+      "d": 0
+     }
+    },
+    {
+     "t": "text",
+     "id": "title",
+     "x": 140,
+     "y": 152,
+     "w": 1640,
+     "h": 170,
+     "text": "Sau điều chỉnh, Phúc Long bứt phá lợi nhuận",
+     "s": "title",
+     "c": "#14271F",
+     "role": "title",
+     "m": {
+      "a": "words",
+      "d": 80
+     }
+    },
+    {
+     "t": "text",
+     "id": "ck",
+     "x": 140,
+     "y": 300,
+     "w": 900,
+     "h": 30,
+     "text": "Lợi nhuận sau thuế · tỷ đồng",
+     "s": "eyebrow",
+     "c": "#4C5A51",
+     "m": {
+      "a": "fade",
+      "d": 200
+     }
+    },
+    {
+     "t": "chart",
+     "id": "chart",
+     "x": 140,
+     "y": 340,
+     "w": 900,
+     "h": 600,
+     "kind": "bar",
+     "cats": [
+      "Năm 2025",
+      "9T/2026 · +46% cùng kỳ"
+     ],
+     "vals": [
+      195,
+      207
+     ],
+     "labels": [
+      "195",
+      "207"
+     ],
+     "colors": [
+      "#5E9C7C",
+      "#93520F"
+     ],
+     "max": 240,
+     "dark": false,
+     "valueSize": 64,
+     "alt": "Biểu đồ cột lợi nhuận sau thuế của Phúc Long: 195 tỷ đồng năm 2025, 207 tỷ đồng 9 tháng đầu năm 2026",
+     "m": {
+      "a": "grow",
+      "d": 300
+     }
+    },
+    {
+     "t": "rect",
+     "id": "kl0",
+     "x": 1140,
+     "y": 350,
+     "w": 300,
+     "h": 4,
+     "fill": "#93520F",
+     "m": {
+      "a": "growX",
+      "d": 700
+     }
+    },
+    {
+     "t": "text",
+     "id": "kn0",
+     "x": 1140,
+     "y": 374,
+     "w": 300,
+     "h": 84,
+     "text": "~67,3%",
+     "s": "num",
+     "size": 72,
+     "c": "#14271F",
+     "m": {
+      "a": "count",
+      "d": 760
+     }
+    },
+    {
+     "t": "text",
+     "id": "ks0",
+     "x": 1140,
+     "y": 466,
+     "w": 300,
+     "h": 110,
+     "text": "biên lợi nhuận gộp, duy trì ở mức cao",
+     "s": "small",
+     "c": "#4C5A51",
+     "m": {
+      "a": "fade",
+      "d": 850
+     }
+    },
+    {
+     "t": "rect",
+     "id": "kl1",
+     "x": 1480,
+     "y": 350,
+     "w": 300,
+     "h": 4,
+     "fill": "#2B6A4E",
+     "m": {
+      "a": "growX",
+      "d": 830
+     }
+    },
+    {
+     "t": "text",
+     "id": "kn1",
+     "x": 1480,
+     "y": 374,
+     "w": 300,
+     "h": 84,
+     "text": "22,8 tr",
+     "s": "num",
+     "size": 72,
+     "c": "#14271F",
+     "m": {
+      "a": "count",
+      "d": 890
+     }
+    },
+    {
+     "t": "text",
+     "id": "ks1",
+     "x": 1480,
+     "y": 466,
+     "w": 300,
+     "h": 110,
+     "text": "đồng doanh thu bình quân mỗi điểm bán/ngày",
+     "s": "small",
+     "c": "#4C5A51",
+     "m": {
+      "a": "fade",
+      "d": 980
+     }
+    },
+    {
+     "t": "rect",
+     "id": "kl2",
+     "x": 1140,
+     "y": 640,
+     "w": 300,
+     "h": 4,
+     "fill": "#2B6A4E",
+     "m": {
+      "a": "growX",
+      "d": 960
+     }
+    },
+    {
+     "t": "text",
+     "id": "kn2",
+     "x": 1140,
+     "y": 664,
+     "w": 300,
+     "h": 84,
+     "text": "+35,1%",
+     "s": "num",
+     "size": 72,
+     "c": "#14271F",
+     "m": {
+      "a": "count",
+      "d": 1020
+     }
+    },
+    {
+     "t": "text",
+     "id": "ks2",
+     "x": 1140,
+     "y": 756,
+     "w": 300,
+     "h": 110,
+     "text": "kênh giao hàng trực tuyến, hơn 31% doanh thu bán lẻ",
+     "s": "small",
+     "c": "#4C5A51",
+     "m": {
+      "a": "fade",
+      "d": 1110
+     }
+    },
+    {
+     "t": "rect",
+     "id": "kl3",
+     "x": 1480,
+     "y": 640,
+     "w": 300,
+     "h": 4,
+     "fill": "#2B6A4E",
+     "m": {
+      "a": "growX",
+      "d": 1090
+     }
+    },
+    {
+     "t": "text",
+     "id": "kn3",
+     "x": 1480,
+     "y": 664,
+     "w": 300,
+     "h": 84,
+     "text": "+39,5%",
+     "s": "num",
+     "size": 72,
+     "c": "#14271F",
+     "m": {
+      "a": "count",
+      "d": 1150
+     }
+    },
+    {
+     "t": "text",
+     "id": "ks3",
+     "x": 1480,
+     "y": 756,
+     "w": 300,
+     "h": 110,
+     "text": "nhóm thực phẩm bán kèm",
+     "s": "small",
+     "c": "#4C5A51",
+     "m": {
+      "a": "fade",
+      "d": 1240
+     }
+    },
+    {
+     "t": "text",
+     "id": "src",
+     "x": 140,
+     "y": 990,
+     "w": 1640,
+     "h": 34,
+     "text": "Số liệu theo tài liệu phân tích của nhóm (mục 4.1).",
+     "s": "caption",
+     "c": "#4C5A51",
+     "m": {
+      "a": "fade",
+      "d": 1300
+     }
+    }
+   ],
+   "deco": [],
+   "notes": "Những lợi thế nội tại của hai bên phát huy rõ sau giai đoạn điều chỉnh. Nguồn lực của Masan giúp Phúc Long chuyển từ doanh nghiệp gia đình sang quản trị chuyên nghiệp. Nhờ tối ưu chuỗi cung ứng và danh mục sản phẩm, biên lợi nhuận gộp duy trì khoảng 67,3%; lợi nhuận sau thuế năm 2025 đạt kỷ lục 195 tỷ đồng và lên 207 tỷ đồng chỉ trong 9 tháng đầu 2026, tăng 46% so với cùng kỳ, vượt cả năm 2025. Khi tập trung vào cửa hàng tiêu chuẩn, doanh thu bình quân mỗi điểm bán đạt 22,8 triệu đồng/ngày; kênh giao hàng trực tuyến tăng 35,1% (hơn 31% doanh thu bán lẻ), nhóm thực phẩm bán kèm tăng 39,5%. Hệ thống Masan Consumer đưa sản phẩm trà, cà phê đóng gói Phúc Long phủ sóng toàn quốc."
+  },
+  {
+   "id": "reset",
+   "section": "04 · Đánh giá và tổng kết",
+   "scene": "dusk",
+   "dark": true,
+   "transition": "fade",
+   "els": [
+    {
+     "t": "text",
+     "id": "eyebrow",
+     "x": 140,
+     "y": 112,
+     "w": 1640,
+     "h": 30,
+     "text": "04 · Giới hạn: mô hình kiosk",
+     "s": "eyebrow",
+     "c": "#E3AC5C",
+     "m": {
+      "a": "fade",
+      "d": 0
+     }
+    },
+    {
+     "t": "text",
+     "id": "title",
+     "x": 140,
+     "y": 152,
+     "w": 1640,
+     "h": 170,
+     "text": "Từ nhân rộng hàng trăm kiosk đến tái cơ cấu có chọn lọc",
+     "s": "title",
+     "c": "#F4EEE2",
+     "role": "title",
+     "m": {
+      "a": "words",
+      "d": 80
+     }
+    },
+    {
+     "t": "line",
+     "id": "seg0",
+     "x1": 140,
+     "y1": 520,
+     "x2": 468,
+     "y2": 520,
+     "c": "#9DCCB1",
+     "w": 4,
+     "m": {
+      "a": "draw",
+      "d": 300
+     }
+    },
+    {
+     "t": "ellipse",
+     "id": "dot0",
+     "x": 129,
+     "y": 509,
+     "w": 22,
+     "h": 22,
+     "fill": "#9DCCB1",
+     "m": {
+      "a": "scale",
+      "d": 300
+     }
+    },
+    {
+     "t": "text",
+     "id": "ph0",
+     "x": 140,
+     "y": 380,
+     "w": 300,
+     "h": 30,
+     "text": "Kỳ vọng",
+     "s": "eyebrow",
+     "c": "#9DCCB1",
+     "m": {
+      "a": "fade",
+      "d": 340
+     }
+    },
+    {
+     "t": "text",
+     "id": "dt0",
+     "x": 140,
+     "y": 420,
+     "w": 300,
+     "h": 56,
+     "text": "05/2021",
+     "s": "num",
+     "size": 40,
+     "c": "#F4EEE2",
+     "m": {
+      "a": "rise",
+      "d": 360
+     }
+    },
+    {
+     "t": "text",
+     "id": "tx0",
+     "x": 140,
+     "y": 556,
+     "w": 300,
+     "h": 170,
+     "text": "Ký hợp tác phát triển Phúc Long Kiosk trong mạng lưới hơn 2.200 cửa hàng VinMart+.",
+     "s": "small",
+     "c": "#B5C7BC",
+     "m": {
+      "a": "rise",
+      "d": 400
+     }
+    },
+    {
+     "t": "line",
+     "id": "seg1",
+     "x1": 468,
+     "y1": 520,
+     "x2": 796,
+     "y2": 520,
+     "c": "#E3AC5C",
+     "w": 4,
+     "m": {
+      "a": "draw",
+      "d": 500
+     }
+    },
+    {
+     "t": "ellipse",
+     "id": "dot1",
+     "x": 457,
+     "y": 509,
+     "w": 22,
+     "h": 22,
+     "fill": "#E3AC5C",
+     "m": {
+      "a": "scale",
+      "d": 500
+     }
+    },
+    {
+     "t": "text",
+     "id": "ph1",
+     "x": 468,
+     "y": 380,
+     "w": 300,
+     "h": 30,
+     "text": "Thua lỗ",
+     "s": "eyebrow",
+     "c": "#E3AC5C",
+     "m": {
+      "a": "fade",
+      "d": 540
+     }
+    },
+    {
+     "t": "text",
+     "id": "dt1",
+     "x": 468,
+     "y": 420,
+     "w": 300,
+     "h": 56,
+     "text": "Q4/2022",
+     "s": "num",
+     "size": 40,
+     "c": "#F4EEE2",
+     "m": {
+      "a": "rise",
+      "d": 560
+     }
+    },
+    {
+     "t": "text",
+     "id": "tx1",
+     "x": 468,
+     "y": 556,
+     "w": 300,
+     "h": 170,
+     "text": "Mảng kiosk ghi nhận khoản lỗ tới 100 tỷ đồng chỉ trong một quý.",
+     "s": "small",
+     "c": "#B5C7BC",
+     "m": {
+      "a": "rise",
+      "d": 600
+     }
+    },
+    {
+     "t": "line",
+     "id": "seg2",
+     "x1": 796,
+     "y1": 520,
+     "x2": 1124,
+     "y2": 520,
+     "c": "#E3AC5C",
+     "w": 4,
+     "m": {
+      "a": "draw",
+      "d": 700
+     }
+    },
+    {
+     "t": "ellipse",
+     "id": "dot2",
+     "x": 785,
+     "y": 509,
+     "w": 22,
+     "h": 22,
+     "fill": "#E3AC5C",
+     "m": {
+      "a": "scale",
+      "d": 700
+     }
+    },
+    {
+     "t": "text",
+     "id": "ph2",
+     "x": 796,
+     "y": 380,
+     "w": 300,
+     "h": 30,
+     "text": "Tái cơ cấu",
+     "s": "eyebrow",
+     "c": "#E3AC5C",
+     "m": {
+      "a": "fade",
+      "d": 740
+     }
+    },
+    {
+     "t": "text",
+     "id": "dt2",
+     "x": 796,
+     "y": 420,
+     "w": 300,
+     "h": 56,
+     "text": "Sau đó",
+     "s": "num",
+     "size": 40,
+     "c": "#F4EEE2",
+     "m": {
+      "a": "rise",
+      "d": 760
+     }
+    },
+    {
+     "t": "text",
+     "id": "tx2",
+     "x": 796,
+     "y": 556,
+     "w": 300,
+     "h": 170,
+     "text": "Đóng cửa hàng loạt điểm bán kiosk không hiệu quả.",
+     "s": "small",
+     "c": "#B5C7BC",
+     "m": {
+      "a": "rise",
+      "d": 800
+     }
+    },
+    {
+     "t": "line",
+     "id": "seg3",
+     "x1": 1124,
+     "y1": 520,
+     "x2": 1452,
+     "y2": 520,
+     "c": "#F4EEE2",
+     "w": 4,
+     "m": {
+      "a": "draw",
+      "d": 900
+     }
+    },
+    {
+     "t": "ellipse",
+     "id": "dot3",
+     "x": 1113,
+     "y": 509,
+     "w": 22,
+     "h": 22,
+     "fill": "#F4EEE2",
+     "m": {
+      "a": "scale",
+      "d": 900
+     }
+    },
+    {
+     "t": "text",
+     "id": "ph3",
+     "x": 1124,
+     "y": 380,
+     "w": 300,
+     "h": 30,
+     "text": "Tập trung",
+     "s": "eyebrow",
+     "c": "#B5C7BC",
+     "m": {
+      "a": "fade",
+      "d": 940
+     }
+    },
+    {
+     "t": "text",
+     "id": "dt3",
+     "x": 1124,
+     "y": 420,
+     "w": 300,
+     "h": 56,
+     "text": "Cuối 2025",
+     "s": "num",
+     "size": 40,
+     "c": "#F4EEE2",
+     "m": {
+      "a": "rise",
+      "d": 960
+     }
+    },
+    {
+     "t": "text",
+     "id": "tx3",
+     "x": 1124,
+     "y": 556,
+     "w": 300,
+     "h": 170,
+     "text": "Thu gọn hệ thống về 202 cửa hàng độc lập.",
+     "s": "small",
+     "c": "#B5C7BC",
+     "m": {
+      "a": "rise",
+      "d": 1000
+     }
+    },
+    {
+     "t": "line",
+     "id": "seg4",
+     "x1": 1452,
+     "y1": 520,
+     "x2": 1780,
+     "y2": 520,
+     "c": "#9DCCB1",
+     "w": 4,
+     "m": {
+      "a": "draw",
+      "d": 1100
+     }
+    },
+    {
+     "t": "ellipse",
+     "id": "dot4",
+     "x": 1441,
+     "y": 509,
+     "w": 22,
+     "h": 22,
+     "fill": "#9DCCB1",
+     "m": {
+      "a": "scale",
+      "d": 1100
+     }
+    },
+    {
+     "t": "text",
+     "id": "ph4",
+     "x": 1452,
+     "y": 380,
+     "w": 300,
+     "h": 30,
+     "text": "Tăng trưởng",
+     "s": "eyebrow",
+     "c": "#9DCCB1",
+     "m": {
+      "a": "fade",
+      "d": 1140
+     }
+    },
+    {
+     "t": "text",
+     "id": "dt4",
+     "x": 1452,
+     "y": 420,
+     "w": 300,
+     "h": 56,
+     "text": "9T/2026",
+     "s": "num",
+     "size": 40,
+     "c": "#F4EEE2",
+     "m": {
+      "a": "rise",
+      "d": 1160
+     }
+    },
+    {
+     "t": "text",
+     "id": "tx4",
+     "x": 1452,
+     "y": 556,
+     "w": 300,
+     "h": 170,
+     "text": "Mở mới có chọn lọc 44 cửa hàng.",
+     "s": "small",
+     "c": "#B5C7BC",
+     "m": {
+      "a": "rise",
+      "d": 1200
+     }
+    },
+    {
+     "t": "rect",
+     "id": "why",
+     "x": 140,
+     "y": 790,
+     "w": 1640,
+     "h": 160,
+     "fill": "#FFFFFF",
+     "alpha": 0.06,
+     "line": {
+      "c": "#2E4A3D",
+      "w": 2
+     },
+     "r": 20,
+     "m": {
+      "a": "rise",
+      "d": 1400
+     }
+    },
+    {
+     "t": "text",
+     "id": "whyk",
+     "x": 190,
+     "y": 828,
+     "w": 320,
+     "h": 80,
+     "text": "Vì sao kiosk không hiệu quả",
+     "s": "eyebrow",
+     "c": "#E3AC5C",
+     "m": {
+      "a": "fade",
+      "d": 1500
+     }
+    },
+    {
+     "t": "text",
+     "id": "whyt",
+     "x": 540,
+     "y": 822,
+     "w": 1190,
+     "h": 100,
+     "text": "Quy trình ủ trà cầu kỳ không hợp tốc độ phục vụ của bán lẻ tiện lợi, khiến chất lượng thiếu đồng bộ và thương hiệu trung – cao cấp có nguy cơ bị loãng.",
+     "s": "body",
+     "c": "#F4EEE2",
+     "m": {
+      "a": "fade",
+      "d": 1550
+     }
+    }
+   ],
+   "deco": [],
+   "notes": "Các rào cản làm chậm thành quả trong ba năm đầu, 2021–2023. Tham vọng nhân rộng thần tốc hàng trăm kiosk bên trong WinMart+ vấp phải rào cản vận hành: quy trình ủ trà cầu kỳ không phù hợp tốc độ phục vụ nhanh của bán lẻ tiện lợi, làm giảm chất lượng đồng bộ và gây rủi ro loãng thương hiệu trung – cao cấp. Mảng kiosk từng lỗ tới 100 tỷ đồng riêng quý 4/2022, buộc Masan đóng cửa hàng loạt điểm bán, thu gọn về 202 cửa hàng độc lập cuối 2025 trước khi mở mới có chọn lọc 44 cửa hàng trong 9 tháng đầu 2026."
+  },
+  {
+   "id": "limits",
+   "section": "04 · Đánh giá và tổng kết",
+   "scene": "paper2",
+   "dark": false,
+   "transition": "fade",
+   "els": [
+    {
+     "t": "text",
+     "id": "eyebrow",
+     "x": 140,
+     "y": 112,
+     "w": 1640,
+     "h": 30,
+     "text": "04 · Giới hạn: vốn và cạnh tranh",
+     "s": "eyebrow",
+     "c": "#93520F",
+     "m": {
+      "a": "fade",
+      "d": 0
+     }
+    },
+    {
+     "t": "text",
+     "id": "title",
+     "x": 140,
+     "y": 152,
+     "w": 1640,
+     "h": 170,
+     "text": "Lợi nhuận đã quay lại, nhưng vốn bỏ ra cần nhiều năm để thu hồi",
+     "s": "title",
+     "c": "#14271F",
+     "role": "title",
+     "m": {
+      "a": "words",
+      "d": 80
+     }
+    },
+    {
+     "t": "text",
+     "id": "lk",
+     "x": 140,
+     "y": 360,
+     "w": 760,
+     "h": 30,
+     "text": "Tỷ suất sinh lời trên vốn đầu tư",
+     "s": "eyebrow",
+     "c": "#93520F",
+     "m": {
+      "a": "fade",
+      "d": 250
+     }
+    },
+    {
+     "t": "text",
+     "id": "big",
+     "x": 140,
+     "y": 392,
+     "w": 760,
+     "h": 236,
+     "text": "3–4%",
+     "s": "num",
+     "size": 200,
+     "c": "#93520F",
+     "m": {
+      "a": "rise",
+      "d": 300
+     }
+    },
+    {
+     "t": "text",
+     "id": "lb",
+     "x": 140,
+     "y": 626,
+     "w": 760,
+     "h": 90,
+     "text": "mỗi năm, dù lợi nhuận ròng đã vượt ngưỡng 200 tỷ đồng/năm vào năm 2026.",
+     "s": "body",
+     "c": "#4C5A51",
+     "m": {
+      "a": "fade",
+      "d": 500
+     }
+    },
+    {
+     "t": "line",
+     "id": "ll",
+     "x1": 140,
+     "y1": 760,
+     "x2": 900,
+     "y2": 760,
+     "c": "#D3C7AD",
+     "w": 2,
+     "m": {
+      "a": "draw",
+      "d": 600
+     }
+    },
+    {
+     "t": "text",
+     "id": "ls",
+     "x": 140,
+     "y": 782,
+     "w": 760,
+     "h": 110,
+     "text": "Vốn giải ngân khoảng 279,6 triệu USD; định giá tăng khoảng 6 lần lên gần 455 triệu USD, nên thời gian thu hồi vốn dài hơn kỳ vọng.",
+     "s": "small",
+     "c": "#4C5A51",
+     "m": {
+      "a": "fade",
+      "d": 650
+     }
+    },
+    {
+     "t": "text",
+     "id": "rk",
+     "x": 1020,
+     "y": 360,
+     "w": 760,
+     "h": 30,
+     "text": "Cạnh tranh không hạ nhiệt",
+     "s": "eyebrow",
+     "c": "#93520F",
+     "m": {
+      "a": "fade",
+      "d": 700
+     }
+    },
+    {
+     "t": "text",
+     "id": "rh",
+     "x": 1020,
+     "y": 404,
+     "w": 760,
+     "h": 112,
+     "text": "Rào cản gia nhập F&B thấp, đối thủ liên tục xuất hiện",
+     "s": "h2",
+     "c": "#14271F",
+     "m": {
+      "a": "rise",
+      "d": 750
+     }
+    },
+    {
+     "t": "box",
+     "id": "ch00",
+     "x": 1020,
+     "y": 556,
+     "w": 276,
+     "h": 54,
+     "text": "Highlands Coffee",
+     "s": "small",
+     "fill": "#FFFFFF",
+     "alpha": 0.6,
+     "line": {
+      "c": "#D3C7AD",
+      "w": 2
+     },
+     "r": 27,
+     "c": "#14271F",
+     "align": "center",
+     "m": {
+      "a": "scale",
+      "d": 850
+     }
+    },
+    {
+     "t": "box",
+     "id": "ch01",
+     "x": 1310,
+     "y": 556,
+     "w": 276,
+     "h": 54,
+     "text": "The Coffee House",
+     "s": "small",
+     "fill": "#FFFFFF",
+     "alpha": 0.6,
+     "line": {
+      "c": "#D3C7AD",
+      "w": 2
+     },
+     "r": 27,
+     "c": "#14271F",
+     "align": "center",
+     "m": {
+      "a": "scale",
+      "d": 910
+     }
+    },
+    {
+     "t": "box",
+     "id": "ch10",
+     "x": 1020,
+     "y": 624,
+     "w": 220,
+     "h": 54,
+     "text": "Trung Nguyên",
+     "s": "small",
+     "fill": "#FFFFFF",
+     "alpha": 0.6,
+     "line": {
+      "c": "#D3C7AD",
+      "w": 2
+     },
+     "r": 27,
+     "c": "#14271F",
+     "align": "center",
+     "m": {
+      "a": "scale",
+      "d": 1030
+     }
+    },
+    {
+     "t": "box",
+     "id": "ch11",
+     "x": 1254,
+     "y": 624,
+     "w": 178,
+     "h": 54,
+     "text": "Starbucks",
+     "s": "small",
+     "fill": "#FFFFFF",
+     "alpha": 0.6,
+     "line": {
+      "c": "#D3C7AD",
+      "w": 2
+     },
+     "r": 27,
+     "c": "#14271F",
+     "align": "center",
+     "m": {
+      "a": "scale",
+      "d": 1090
+     }
+    },
+    {
+     "t": "box",
+     "id": "ch12",
+     "x": 1446,
+     "y": 624,
+     "w": 150,
+     "h": 54,
+     "text": "Katinat",
+     "s": "small",
+     "fill": "#FFFFFF",
+     "alpha": 0.6,
+     "line": {
+      "c": "#D3C7AD",
+      "w": 2
+     },
+     "r": 27,
+     "c": "#14271F",
+     "align": "center",
+     "m": {
+      "a": "scale",
+      "d": 1150
+     }
+    },
+    {
+     "t": "box",
+     "id": "ch20",
+     "x": 1020,
+     "y": 692,
+     "w": 136,
+     "h": 54,
+     "text": "Chagee",
+     "s": "small",
+     "fill": "#FFFFFF",
+     "alpha": 0.6,
+     "line": {
+      "c": "#D3C7AD",
+      "w": 2
+     },
+     "r": 27,
+     "c": "#14271F",
+     "align": "center",
+     "m": {
+      "a": "scale",
+      "d": 1210
+     }
+    },
+    {
+     "t": "line",
+     "id": "rl",
+     "x1": 1020,
+     "y1": 776,
+     "x2": 1780,
+     "y2": 776,
+     "c": "#D3C7AD",
+     "w": 2,
+     "m": {
+      "a": "draw",
+      "d": 1200
+     }
+    },
+    {
+     "t": "text",
+     "id": "rs",
+     "x": 1020,
+     "y": 798,
+     "w": 760,
+     "h": 110,
+     "text": "Phúc Long phải liên tục làm mới nhận diện văn hóa trà Việt và tranh mặt bằng đắc địa, thay vì dựa vào độ phủ số lượng.",
+     "s": "small",
+     "c": "#4C5A51",
+     "m": {
+      "a": "fade",
+      "d": 1250
+     }
+    }
+   ],
+   "deco": [],
+   "notes": "Hai giới hạn còn lại. Thứ nhất, định giá mua vào cao: với khoảng 279,6 triệu USD vốn bỏ ra, dù lợi nhuận ròng vượt 200 tỷ đồng/năm, tỷ suất sinh lời trên vốn đầu tư mới đạt khoảng 3–4% mỗi năm, khiến thời gian thu hồi vốn kéo dài hơn kỳ vọng. Thứ hai, cạnh tranh gay gắt: Highlands Coffee, Katinat hay làn sóng trà mới như Chagee buộc Phúc Long phải đầu tư làm mới thương hiệu và tranh mặt bằng đắc địa."
+  },
+  {
+   "id": "lessons",
+   "section": "04 · Đánh giá và tổng kết",
+   "scene": "paper",
+   "dark": false,
+   "transition": "fade",
+   "els": [
+    {
+     "t": "text",
+     "id": "eyebrow",
+     "x": 140,
+     "y": 112,
+     "w": 1640,
+     "h": 30,
+     "text": "04 · Tổng kết",
+     "s": "eyebrow",
+     "c": "#93520F",
+     "m": {
+      "a": "fade",
+      "d": 0
+     }
+    },
+    {
+     "t": "text",
+     "id": "title",
+     "x": 140,
+     "y": 152,
+     "w": 1640,
+     "h": 170,
+     "text": "Ba bài học từ thương vụ Masan – Phúc Long",
+     "s": "title",
+     "c": "#14271F",
+     "role": "title",
+     "m": {
+      "a": "words",
+      "d": 80
+     }
+    },
+    {
+     "t": "line",
+     "id": "l0",
+     "x1": 140,
+     "y1": 330,
+     "x2": 665,
+     "y2": 330,
+     "c": "#14271F",
+     "w": 2,
+     "step": 0,
+     "m": {
+      "a": "draw",
+      "d": 300
+     }
+    },
+    {
+     "t": "text",
+     "id": "n0",
+     "x": 140,
+     "y": 346,
+     "w": 525,
+     "h": 144,
+     "text": "01",
+     "s": "num",
+     "size": 120,
+     "c": "#B9AE95",
+     "step": 0,
+     "m": {
+      "a": "rise",
+      "d": 360
+     }
+    },
+    {
+     "t": "text",
+     "id": "h0",
+     "x": 140,
+     "y": 494,
+     "w": 525,
+     "h": 110,
+     "text": "Mua thương hiệu là mua thời gian",
+     "s": "h2",
+     "size": 40,
+     "c": "#14271F",
+     "step": 0,
+     "m": {
+      "a": "rise",
+      "d": 440
+     }
+    },
+    {
+     "t": "text",
+     "id": "b0",
+     "x": 140,
+     "y": 616,
+     "w": 525,
+     "h": 170,
+     "text": "Masan vào ngành đồ uống nhanh mà không phải tự xây chuỗi hay thương hiệu mới, thứ khó tạo ra trong thời gian ngắn.",
+     "s": "small",
+     "c": "#4C5A51",
+     "step": 0,
+     "m": {
+      "a": "rise",
+      "d": 520
+     }
+    },
+    {
+     "t": "line",
+     "id": "l1",
+     "x1": 697,
+     "y1": 330,
+     "x2": 1222,
+     "y2": 330,
+     "c": "#14271F",
+     "w": 2,
+     "step": 1,
+     "m": {
+      "a": "draw",
+      "d": 0
+     }
+    },
+    {
+     "t": "text",
+     "id": "n1",
+     "x": 697,
+     "y": 346,
+     "w": 525,
+     "h": 144,
+     "text": "02",
+     "s": "num",
+     "size": 120,
+     "c": "#B9AE95",
+     "step": 1,
+     "m": {
+      "a": "rise",
+      "d": 60
+     }
+    },
+    {
+     "t": "text",
+     "id": "h1",
+     "x": 697,
+     "y": 494,
+     "w": 525,
+     "h": 110,
+     "text": "Cộng hưởng không thể ép bằng mặt bằng",
+     "s": "h2",
+     "size": 40,
+     "c": "#14271F",
+     "step": 1,
+     "m": {
+      "a": "rise",
+      "d": 140
+     }
+    },
+    {
+     "t": "text",
+     "id": "b1",
+     "x": 697,
+     "y": 616,
+     "w": 525,
+     "h": 170,
+     "text": "Kiosk trong siêu thị mini thất bại vì xung đột trải nghiệm. Giá trị thật đến từ cửa hàng chuẩn, giao hàng và sản phẩm đóng gói.",
+     "s": "small",
+     "c": "#4C5A51",
+     "step": 1,
+     "m": {
+      "a": "rise",
+      "d": 220
+     }
+    },
+    {
+     "t": "line",
+     "id": "l2",
+     "x1": 1254,
+     "y1": 330,
+     "x2": 1779,
+     "y2": 330,
+     "c": "#14271F",
+     "w": 2,
+     "step": 2,
+     "m": {
+      "a": "draw",
+      "d": 0
+     }
+    },
+    {
+     "t": "text",
+     "id": "n2",
+     "x": 1254,
+     "y": 346,
+     "w": 525,
+     "h": 144,
+     "text": "03",
+     "s": "num",
+     "size": 120,
+     "c": "#B9AE95",
+     "step": 2,
+     "m": {
+      "a": "rise",
+      "d": 60
+     }
+    },
+    {
+     "t": "text",
+     "id": "h2",
+     "x": 1254,
+     "y": 494,
+     "w": 525,
+     "h": 110,
+     "text": "Quản trị chuyên nghiệp mở khóa giá trị",
+     "s": "h2",
+     "size": 40,
+     "c": "#14271F",
+     "step": 2,
+     "m": {
+      "a": "rise",
+      "d": 140
+     }
+    },
+    {
+     "t": "text",
+     "id": "b2",
+     "x": 1254,
+     "y": 616,
+     "w": 525,
+     "h": 170,
+     "text": "Từ doanh nghiệp gia đình, Phúc Long thành mảnh ghép F&B sinh lời bền vững, có cơ hội vươn ra thị trường nước ngoài như Mỹ.",
+     "s": "small",
+     "c": "#4C5A51",
+     "step": 2,
+     "m": {
+      "a": "rise",
+      "d": 220
+     }
+    },
+    {
+     "t": "rect",
+     "id": "rec",
+     "x": 140,
+     "y": 830,
+     "w": 1640,
+     "h": 130,
+     "fill": "#12291F",
+     "r": 20,
+     "step": 3,
+     "m": {
+      "a": "rise",
+      "d": 0
+     }
+    },
+    {
+     "t": "text",
+     "id": "reck",
+     "x": 190,
+     "y": 872,
+     "w": 240,
+     "h": 40,
+     "text": "Khuyến nghị",
+     "s": "eyebrow",
+     "c": "#E3AC5C",
+     "step": 3,
+     "m": {
+      "a": "fade",
+      "d": 120
+     }
+    },
+    {
+     "t": "text",
+     "id": "rect",
+     "x": 440,
+     "y": 858,
+     "w": 1290,
+     "h": 76,
+     "text": "M&A tiềm ẩn rủi ro mất thương hiệu, bị thâu tóm hay thống lĩnh thị trường. Nhà nước cần hoàn thiện hành lang pháp lý và xây dựng thị trường M&A chuyên nghiệp hơn.",
+     "s": "small",
+     "c": "#F4EEE2",
+     "step": 3,
+     "m": {
+      "a": "fade",
+      "d": 180
+     }
+    }
+   ],
+   "deco": [],
+   "notes": "Bấm để lần lượt hiện bài học 2, 3 và khuyến nghị. Một, thương vụ giúp Masan phát triển nhanh trong ngành đồ uống mà không cần xây thương hiệu mới. Hai, ý tưởng tích hợp cơ học kiosk trong siêu thị mini không thành công; giá trị đến từ cửa hàng chuẩn và các kênh bổ trợ. Ba, năng lực quản trị chuyên nghiệp biến Phúc Long thành mảnh ghép sinh lời và mở đường ra thị trường nước ngoài như Mỹ. Ở góc độ vĩ mô, nhóm đề xuất hoàn thiện hành lang pháp lý và xây dựng thị trường M&A chuyên nghiệp hơn."
+  },
+  {
+   "id": "closing",
+   "section": "04 · Đánh giá và tổng kết",
+   "scene": "hero",
+   "dark": true,
+   "layout": "hero",
+   "transition": "fade",
+   "deco": [
+    {
+     "k": "cup",
+     "cx": 1450,
+     "cy": 590,
+     "r": 300
+    },
+    {
+     "k": "steam",
+     "x": 1450,
+     "y": 110
+    },
+    {
+     "k": "contour",
+     "cx": 160,
+     "cy": 1060,
+     "rx": 520,
+     "ry": 300,
+     "n": 9,
+     "c": "#9DCCB1",
+     "a": 0.1,
+     "rot": -8
+    }
+   ],
+   "els": [
+    {
+     "t": "text",
+     "id": "eyebrow",
+     "x": 140,
+     "y": 120,
+     "w": 900,
+     "h": 30,
+     "text": "Masan × Phúc Long",
+     "s": "eyebrow",
+     "c": "#E3AC5C",
+     "m": {
+      "a": "fade",
+      "d": 0
+     }
+    },
+    {
+     "t": "text",
+     "id": "title",
+     "x": 140,
+     "y": 372,
+     "w": 1100,
+     "h": 316,
+     "text": "Cảm ơn đã\nlắng nghe",
+     "s": "display",
+     "size": 140,
+     "c": "#F4EEE2",
+     "role": "title",
+     "m": {
+      "a": "words",
+      "d": 150
+     }
+    },
+    {
+     "t": "text",
+     "id": "sub",
+     "x": 140,
+     "y": 706,
+     "w": 900,
+     "h": 70,
+     "text": "Hỏi & đáp",
+     "s": "h2",
+     "italic": true,
+     "size": 56,
+     "c": "#E3AC5C",
+     "m": {
+      "a": "rise",
+      "d": 700
+     }
+    },
+    {
+     "t": "line",
+     "id": "rule",
+     "x1": 140,
+     "y1": 900,
+     "x2": 1780,
+     "y2": 900,
+     "c": "#2E4A3D",
+     "w": 2,
+     "m": {
+      "a": "draw",
+      "d": 800
+     }
+    },
+    {
+     "t": "text",
+     "id": "meta1",
+     "x": 140,
+     "y": 928,
+     "w": 800,
+     "h": 40,
+     "text": "Nhóm 2 · K26D2 · UFM",
+     "s": "body",
+     "c": "#B5C7BC",
+     "m": {
+      "a": "fade",
+      "d": 950
+     }
+    },
+    {
+     "t": "text",
+     "id": "meta2",
+     "x": 980,
+     "y": 928,
+     "w": 800,
+     "h": 40,
+     "text": "Phân tích chiến lược thu mua Phúc Long",
+     "s": "body",
+     "c": "#B5C7BC",
+     "align": "right",
+     "m": {
+      "a": "fade",
+      "d": 1000
+     }
+    }
+   ],
+   "notes": "Cảm ơn thầy cô và các bạn đã lắng nghe. Nhóm 2 sẵn sàng nhận câu hỏi."
+  }
+ ]
+}
