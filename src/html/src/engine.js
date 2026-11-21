@@ -173,7 +173,7 @@
     }
     prev.classList.add('leaving');
     next.classList.add('active');
-    const outKF = [{ opacity: 1, transform: 'none', filter: 'blur(0)' }, { opacity: 0, transform: `scale(${dir > 0 ? 0.985 : 1.015})`, filter: 'blur(8px)' }];
+    const outKF = [{ opacity: 1, transform: 'none' }, { opacity: 0, transform: `scale(${dir > 0 ? 0.985 : 1.015})` }];
     const inKF = [{ opacity: 0, transform: `scale(${dir > 0 ? 1.025 : 0.985})` }, { opacity: 1, transform: 'none' }];
     const out = prev.animate(outKF, { duration: 650, easing: INOUT, fill: 'forwards' });
     next.animate(inKF, { duration: 900, easing: OUT });
