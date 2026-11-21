@@ -14,7 +14,7 @@ Transitions: Fade on every slide; Morph (with Fade fallback) on slides whose spe
 import json, re, sys, zipfile, shutil, os
 
 ROOT = os.path.join(os.path.dirname(__file__), '..')
-PPTX = os.path.join(ROOT, 'powerpoint', 'presentation.pptx')
+PPTX = os.path.join(ROOT, 'powerpoint', sys.argv[1] if len(sys.argv) > 1 else 'presentation.pptx')
 spec = json.load(open(os.path.join(ROOT, 'spec', 'presentation.json'), encoding='utf-8'))
 
 EFFECTS = {

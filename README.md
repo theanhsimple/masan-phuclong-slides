@@ -16,6 +16,7 @@ Trên điện thoại: vuốt trái/phải.
 
 - Bản PDF 20 trang: [`files/Masan-PhucLong.pdf`](files/Masan-PhucLong.pdf)
 - Bản PowerPoint chỉnh sửa được: [`files/Masan-PhucLong.pptx`](files/Masan-PhucLong.pptx) (cần cài font Lora và Inter).
+- Bản PowerPoint dùng font có sẵn trong Office (Cambria + Calibri), không cần cài thêm: [`files/Masan-PhucLong-font-co-san.pptx`](files/Masan-PhucLong-font-co-san.pptx)
 - Mã nguồn dựng cả hai bản từ một spec chung: [`src/`](src/) — nội dung từng slide nằm ở `src/spec/build-spec.js`.
 
 **Góp ý:** mở một *Issue* ghi số slide và nội dung cần sửa.

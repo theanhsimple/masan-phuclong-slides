@@ -12,6 +12,10 @@ const C = spec.tokens.color;
 const IN = (px) => +(px / 144).toFixed(4);
 const PT = (px) => +(px / 2).toFixed(2);
 const hx = (c) => c.replace('#', '').toUpperCase();
+const SAFE = process.env.SAFE === '1';
+const HEAD = SAFE ? 'Cambria' : 'Lora', BODY = SAFE ? 'Calibri' : 'Inter';
+const FSCALE = SAFE ? { Lora: 0.97, Inter: 1.07 } : { Lora: 1, Inter: 1 }; // Calibri runs small, Cambria a touch large
+const OUTFILE = SAFE ? 'presentation-safe-fonts.pptx' : 'presentation.pptx';
 
 const STY = {
   display: { f: 'Lora', w: 500, s: 140, lh: 1.0, ls: -2 },
@@ -29,8 +33,8 @@ const STY = {
 
 const THEME = {
   name: 'Ủ Vị – Tea Light Editorial',
-  headFontFace: 'Lora',
-  bodyFontFace: 'Inter',
+  headFontFace: HEAD,
+  bodyFontFace: BODY,
   colors: {
     dk1: hx(C.ink), lt1: hx(C.cream), dk2: hx(C.forest800), lt2: hx(C.cream2),
     accent1: hx(C.tea600), accent2: hx(C.amber), accent3: hx(C.tea400), accent4: hx(C.amberD),
@@ -43,16 +47,16 @@ pres.layout = 'LAYOUT_WIDE';
 pres.title = spec.meta.title;
 pres.author = spec.meta.author;
 pres.company = 'UFM · K26D2 · Nhóm 2';
-pres.theme = { headFontFace: 'Lora', bodyFontFace: 'Inter' };
+pres.theme = { headFontFace: HEAD, bodyFontFace: BODY };
 
 function textOpts(e, extra = {}) {
   const p = STY[e.s];
   const w8 = e.w8 || p.w;
   const ls = e.ls ?? p.ls ?? 0;
   return {
-    fontFace: p.f, fontSize: PT(e.size || p.s), bold: w8 >= 600, italic: !!e.italic,
+    fontFace: p.f === 'Lora' ? HEAD : BODY, fontSize: +(PT(e.size || p.s) * FSCALE[p.f]).toFixed(1), bold: w8 >= 600, italic: !!e.italic,
     color: hx(e.c), align: e.align || 'left', valign: 'top', margin: 0,
-    lineSpacing: PT((e.size || p.s) * (e.lh || p.lh)), charSpacing: ls ? PT(ls) : undefined, fit: 'none', ...extra,
+    lineSpacing: +(PT((e.size || p.s) * (e.lh || p.lh)) * FSCALE[p.f]).toFixed(1), charSpacing: ls ? PT(ls) : undefined, fit: 'none', ...extra,
   };
 }
 function runs(e) {
@@ -157,9 +161,9 @@ spec.slides.forEach((s, si) => {
             x: IN(e.x), y: IN(e.y), w: IN(e.w), h: IN(e.h), objectName: name, altText: e.alt,
             barDir: 'col', barGapWidthPct: 79, chartColors: e.colors.map(hx),
             valAxisHidden: true, valAxisMinVal: 0, valAxisMaxVal: e.max, valGridLine: { style: 'none' }, catGridLine: { style: 'none' },
-            showValue: true, dataLabelPosition: 'outEnd', dataLabelFontFace: 'Lora', dataLabelFontSize: PT(e.valueSize), dataLabelColor: hx(fg),
+            showValue: true, dataLabelPosition: 'outEnd', dataLabelFontFace: HEAD, dataLabelFontSize: PT(e.valueSize), dataLabelColor: hx(fg),
             dataLabelFormatCode: pct ? '0"%"' : '#,##0',
-            catAxisLabelFontFace: 'Inter', catAxisLabelFontSize: 12, catAxisLabelColor: hx(sub), catAxisLineShow: true,
+            catAxisLabelFontFace: BODY, catAxisLabelFontSize: 12, catAxisLabelColor: hx(sub), catAxisLineShow: true,
             catAxisLineColor: hx(base), catAxisLineSize: 1, valAxisLineShow: false, showLegend: false,
             plotArea: { fill: { color: hx(C.cream), transparency: 100 } }, chartArea: { fill: { color: hx(C.cream), transparency: 100 } },
           });
@@ -172,7 +176,7 @@ spec.slides.forEach((s, si) => {
 });
 
 (async () => {
-  const out = path.join(__dirname, 'presentation.pptx');
+  const out = path.join(__dirname, OUTFILE);
   await pres.writeFile({ fileName: out });
   await applyTheme(out, THEME);
   console.log('written', out, 'layouts:', layouts.size);
